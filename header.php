@@ -46,7 +46,7 @@
 		</script>
 		
 	</head>
-	<body class="<?=body_classes()?>">
+	<body class="<?=body_classes()?> <?php if (is_home()) { ?>body-home<?php } ?>">
 		<div class="container">
 			<div class="row">
 				<div id="header" class="span12">
