@@ -85,9 +85,8 @@ Config::$custom_post_types = array(
 	'Video',
 	'Document',
 	'Publication',
-	'Page',
 	'Person',
-	'Post'
+	'Page'
 );
 
 Config::$custom_taxonomies = array(
@@ -100,6 +99,7 @@ Config::$body_classes = array('default',);
  * Configure theme settings, see abstract class Field's descendants for
  * available fields. -- functions/base.php
  **/
+$pageobj = new Page;
 Config::$theme_settings = array(
 	'Analytics' => array(
 		new TextField(array(
@@ -154,6 +154,59 @@ Orlando, FL  32816-0001',
 			'description' => 'Contact email address that visitors to your site can use to contact you.',
 			'value'       => $theme_options['site_contact'],
 		)),
+	),
+	'Home Page' => array(
+		new TextareaField(array(
+			'name'        => 'Home page blurb',
+			'id'          => THEME_OPTIONS_NAME.'[home_content]',
+			'description' => 'Content that goes at the top of the home page (above "the fold").',
+			'value'       => $theme_options['home_content'],
+		)),
+		new SelectField(array(
+			'name'        => 'Featured Page 1',
+			'id'          => THEME_OPTIONS_NAME.'[home_feature_1]',
+			'description' => 'Featured content on the home page, displayed below the home page blurb.',
+			'choices'     => $pageobj->get_objects_as_options(),
+			'value'       => $theme_options['home_feature_1'],
+	    )),
+		new SelectField(array(
+			'name'        => 'Featured Page 2',
+			'id'          => THEME_OPTIONS_NAME.'[home_feature_2]',
+			'description' => 'Featured content on the home page, displayed below the home page blurb.',
+			'choices'     => $pageobj->get_objects_as_options(),
+			'value'       => $theme_options['home_feature_2'],
+	    )),
+		new SelectField(array(
+			'name'        => 'Featured Page 3',
+			'id'          => THEME_OPTIONS_NAME.'[home_feature_3]',
+			'description' => 'Featured content on the home page, displayed below the home page blurb.',
+			'choices'     => $pageobj->get_objects_as_options(),
+			'value'       => $theme_options['home_feature_3'],
+	    )),
+		
+	),
+	'Below the Fold' => array(
+		new TextField(array(
+			'name'        => 'Below the Fold title',
+			'id'          => THEME_OPTIONS_NAME.'[btf_title]',
+			'description' => 'Header text for the "below the fold" area, displayed at the bottom of each page.',
+			'value'       => $theme_options['btf_title'],
+			'default'	  => 'Need to report a compliance concern?',
+		)),
+		new TextareaField(array(
+			'name'        => 'Below the Fold blurb',
+			'id'          => THEME_OPTIONS_NAME.'[btf_blurb]',
+			'description' => 'Content that goes in the "below the fold" area.',
+			'value'       => $theme_options['btf_blurb'],
+			'default'	  => 'Input is essential to maintaining open communication regarding ethics and compliance at UCF. Be assured, your comments will be reviewed and handled as promptly and discreetly as possible.',
+		)),
+		new TextField(array(
+			'name'        => 'Below the Fold call to action button',
+			'id'          => THEME_OPTIONS_NAME.'[btf_cta]',
+			'description' => 'Text that goes in the blue call to action button in the "below the fold" area.  This text should be brief but specific.',
+			'value'       => $theme_options['btf_cta'],
+			'default'	  => 'Make a Report',
+		)),		
 	),
 	'Social' => array(
 		new RadioField(array(

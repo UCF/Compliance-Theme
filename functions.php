@@ -8,4 +8,18 @@ require_once('shortcodes.php');         		# Per theme shortcodes
 
 //Add theme-specific functions here.
 
+/**
+ * Allow shortcodes in widgets
+ **/
+add_filter('widget_text', 'do_shortcode');
+
+/**
+ * Hide unused admin tools (Links, Comments, etc)
+ **/
+function hide_admin_links() {
+	remove_menu_page('link-manager.php');
+	remove_menu_page('edit-comments.php');
+}
+add_action('admin_menu', 'hide_admin_links');
+
 ?>

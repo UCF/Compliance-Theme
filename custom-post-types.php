@@ -465,40 +465,6 @@ class Publication extends CustomPostType{
 	}
 }
 
-class Page extends CustomPostType {
-	public
-		$name           = 'page',
-		$plural_name    = 'Pages',
-		$singular_name  = 'Page',
-		$add_new_item   = 'Add New Page',
-		$edit_item      = 'Edit Page',
-		$new_item       = 'New Page',
-		$public         = True,
-		$use_editor     = True,
-		$use_thumbnails = False,
-		$use_order      = True,
-		$use_title      = True,
-		$use_metabox    = True,
-		$built_in       = True;
-
-	public function fields() {
-		$prefix = $this->options('name').'_';
-		return array(
-			array(
-				'name' => 'Hide Lower Section',
-				'desc' => 'This section normally contains the Flickr, News and Events widgets. The footer will not be hidden',
-				'id'   => $prefix.'hide_fold',
-				'type' => 'checkbox',
-			),
-				array(
-					'name' => 'Stylesheet',
-					'desc' => '',
-					'id' => $prefix.'stylesheet',
-					'type' => 'file',
-				),
-		);
-	}
-}
 
 /**
  * Describes a staff member
@@ -644,38 +610,32 @@ class Person extends CustomPostType
 	}
 } // END class 
 
-class Post extends CustomPostType {
+
+class Page extends CustomPostType {
 	public
-		$name           = 'post',
-		$plural_name    = 'Posts',
-		$singular_name  = 'Post',
-		$add_new_item   = 'Add New Post',
-		$edit_item      = 'Edit Post',
-		$new_item       = 'New Post',
+		$name           = 'page',
+		$plural_name    = 'Pages',
+		$singular_name  = 'Page',
+		$add_new_item   = 'Add New Page',
+		$edit_item      = 'Edit Page',
+		$new_item       = 'New Page',
 		$public         = True,
 		$use_editor     = True,
 		$use_thumbnails = False,
 		$use_order      = True,
 		$use_title      = True,
 		$use_metabox    = True,
-		$taxonomies     = array('post_tag', 'category'),
 		$built_in       = True;
 
 	public function fields() {
 		$prefix = $this->options('name').'_';
 		return array(
 			array(
-				'name' => 'Hide Lower Section',
-				'desc' => 'This section normally contains the Flickr, News and Events widgets. The footer will not be hidden',
-				'id'   => $prefix.'hide_fold',
-				'type' => 'checkbox',
+				'name' => 'Subheader Description',
+				'desc' => 'A short blurb describing the contents of this page.  Displays below the page title and on the home page if this page is selected as a home page feature.',
+				'id'   => $prefix.'description',
+				'type' => 'textarea',
 			),
-				array(
-					'name' => 'Stylesheet',
-					'desc' => '',
-					'id' => $prefix.'stylesheet',
-					'type' => 'file',
-				),
 		);
 	}
 }
