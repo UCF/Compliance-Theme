@@ -4,6 +4,7 @@
 		<div class="span12">
 			<header>
 				<h1><?php the_title();?></h1>
+				<p class="desc"><?=get_post_meta($post->ID, 'page_description', true);?></p>
 			</header>
 		</div>
 		<div class="span11">
