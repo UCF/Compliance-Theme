@@ -49,7 +49,7 @@ function get_below_the_fold() {
 			<p><?=$blurb?></p>
 		</div>
 		<div class="span3" id="below-the-fold-cta">
-			<a href="<?=do_shortcode($link);?>"><?=$cta?></a>
+			<a class="cta-btn" href="<?=do_shortcode($link);?>"><?=$cta?></a>
 		</div>
 	</div>	
 	<?php
@@ -122,7 +122,7 @@ function get_home_featured_content() {
 			<div class="<?=$spanclass?> home-feature">
 				<?=get_the_post_thumbnail($f, 'thumbnail', array('class' => 'home-feature-icon'));?>
 				<div class="home-feature-textwrap">
-					<h3><?=$title?></h3>
+					<h3><a href="<?=get_permalink($page)?>"><?=$title?></a></h3>
 					<p><?=$desc?></p>
 				</div>
 			</div>		
