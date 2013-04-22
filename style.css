@@ -5,7 +5,106 @@ Github Theme URI: https://github.com/UCF/Compliance-Theme
 Version: v0.0.0
 */
 
-/* Site Styles */
+/* Universal */
+body > .container a { -webkit-transition: .15s ease-in-out; transition: .15s ease-in-out; }
+hr { color: #8adfd4; border-color: #8adfd4 -moz-use-text-color transparent; }
 
-
+/* Home */
 body.body-home { background: #fff url('static/img/gradient-blue.png') repeat-x top left; }
+body.body-home:after {
+	display: block;
+	content: '';
+	width: 419px;
+	height: 427px;
+	background: url('static/img/home-compass.png') center center no-repeat;
+	position: absolute;
+	top: 60px;
+	right: 0;
+	z-index: 1;
+}
+body.body-home > .container { position: relative; z-index: 2; }
+
+#home { }
+#home #home-content { font-family: 'TrocchiRegular', Georgia, serif; font-size: 30px; line-height: 45px; color: #1e5b53; }
+#home #home-content a { color: #fff; text-decoration: underline; }
+#home #home-content a:hover { color: #efefef; }
+
+/* Home features */
+#home-features {}
+#home-features .home-feature {}
+#home-features .home-feature .home-feature-icon { float: left; }
+#home-features .home-feature .home-feature-textwrap { 
+	margin-left: 40px; 
+	min-height: 170px; 
+	padding-right: 15px;
+	border-right: 1px solid #8adfd4;
+}
+#home-features .home-feature:last-child .home-feature-textwrap {
+	padding-right: 0; border-right: 0;
+}
+#home-features .home-feature .home-feature-textwrap h3 { 
+	margin-top: 0; 
+	margin-bottom: 5px;
+	line-height: 26px; 
+	font-size: 20px; 
+	font-weight: 300; 
+	color: #1e5b53;
+}
+
+
+/* Header */
+#header { border-bottom: 1px solid #8adfd4; padding-bottom: 8px; margin-bottom: .5em; margin-top:20px; }
+#header h1 { line-height: 32px; font-size: 24px; margin: 5px 0; font-weight: 500; }
+#header h1 a { color: #fff; }
+#header h1 a:hover { color: #efefef; }
+
+/* Header menu */
+#header-menu-wrap {}
+#header-menu-wrap #header-menu {}
+#header-menu-wrap #header-menu li a { color: #fff; text-decoration: underline; }
+#header-menu-wrap #header-menu li a:hover { color: #efefef; }
+
+/* Below the Fold */
+#below-the-fold { }
+#below-the-fold-icon p { text-align: center; position: relative; margin-bottom: 0; }
+#below-the-fold-icon p img { }
+
+#below-the-fold-content h3 { 
+	color: #333; 
+	font-size: 18px; 
+	line-height: 26px; 
+	font-weight: 400; 
+	margin-top: 0; 
+	margin-bottom: 5px; 
+}
+#below-the-fold-content p { font-weight: 300; font-size: 16px; line-height: 23px; margin-bottom: 0; }
+
+#below-the-fold-cta a {
+	display: inline-block;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: bold;
+	color: #fff;
+	padding: 15px 20px;
+	border-radius: 10px;
+	border: 2px solid #fff;
+	box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
+	background: #59c7b9; /* Old browsers */
+	background: -moz-linear-gradient(top, #59c7b9 0%, #1cb9a5 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient(top, #59c7b9 0%,#1cb9a5 100%); /* Chrome10+,Safari5.1+ */
+	background: -ms-linear-gradient(top, #59c7b9 0%,#1cb9a5 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #59c7b9 0%,#1cb9a5 100%); /* W3C */
+}
+#below-the-fold-cta a:hover {
+	text-decoration: none;
+	background: #1cb9a5; /* Old browsers */
+	background: -moz-linear-gradient(top, #1cb9a5 0%, #59c7b9 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient(top, #1cb9a5 0%,#59c7b9 100%); /* Chrome10+,Safari5.1+ */
+	background: -ms-linear-gradient(top, #1cb9a5 0%,#59c7b9 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #1cb9a5 0%,#59c7b9 100%); /* W3C */
+}
+#below-the-fold-cta a:active {
+	background: #1cb9a5;
+	transition: none;
+	-webkit-transition: none;
+}

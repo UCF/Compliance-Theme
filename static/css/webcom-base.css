@@ -28,6 +28,8 @@ select#UCFHBHeaderLinks {
 	line-height: 15px;
 }
 
+#UCFHBHeader { position: relative; z-index: 999; }
+
 /**
  * Element styles (No font-family)
  **/
@@ -51,7 +53,6 @@ ul.dropdown-menu li a { margin-right: 0; white-space: pre-wrap; }
 .navbar-inverse .brand { color: #fff; }
 .navbar .dropdown-menu, .navbar .dropdown-menu li { display: block !important; }
 
-#header { border-bottom: 1px solid #000; padding-bottom: 8px; margin-bottom: .5em; margin-top:20px; }
 #header-menu { margin-bottom: 16px; }
 #header .social{}
 #header .social.menu.horizontal a{text-indent: -1024px;}

@@ -5,9 +5,9 @@
 	$home_content 	= $options['home_content'];
 ?>
 	<div class="row page-content" id="home">
-		<div class="span12">
+		<div class="span10">
 			<article>
-				<p id="home_content"><?=$home_content;?></p>
+				<p id="home-content"><?=$home_content;?></p>
 			</article>
 		</div>
 	</div>
