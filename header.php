@@ -49,27 +49,16 @@
 	<body class="<?=body_classes()?>">
 		<div class="container">
 			<div class="row">
-				<div id="header" class="row-border-bottom-top">
-					<h1 class="span9"><a href="<?=bloginfo('url')?>"><?=bloginfo('name')?></a></h1>
-					<?php $options = get_option(THEME_OPTIONS_NAME);?>
-					<?php if($options['facebook_url'] or $options['twitter_url']):?>
-					<ul class="social menu horizontal span3">
-						<?php if($options['facebook_url']):?>
-						<li><a class="ignore-external facebook" href="<?=$options['facebook_url']?>">Facebook</a></li>
-						<?php endif;?>
-						<?php if($options['twitter_url']):?>
-						<li><a class="ignore-external twitter" href="<?=$options['twitter_url']?>">Twitter</a></li>
-						<?php endif;?>
-					</ul>
-					<?php else:?>
-					<div class="social span3">&nbsp;</div>
-					<?php endif;?>
+				<div id="header" class="span12">
+					<h1><a href="<?=bloginfo('url')?>"><?=bloginfo('name')?></a></h1>
 				</div>
 			</div>
 			<?=wp_nav_menu(array(
 				'theme_location' => 'header-menu', 
-				'container' => 'false', 
-				'menu_class' => 'menu '.get_header_styles(), 
+				'container' => 'div',
+				'container_class' => 'row', 
+				'container_id' => 'header-menu-wrap',
+				'menu_class' => 'span12 menu '.get_header_styles(), 
 				'menu_id' => 'header-menu', 
 				'walker' => new Bootstrap_Walker_Nav_Menu()
 				));

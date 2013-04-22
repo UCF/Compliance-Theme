@@ -5,36 +5,6 @@ Github Theme URI: https://github.com/UCF/Compliance-Theme
 Version: v0.0.0
 */
 
-/* UCF Header Styles */
-
-#UCFHBSearch_ucf fieldset #q {
-	line-height: 11px;
-	color: #000000;
-	padding: 2px!important;
-	font-size: 11px;
-	font-family: 'Lucida Grande',sans-serif;
-	height: 13px;
-	border-radius: 0;
-	webkit-border-radius: 0;
-	moz-border-radius: 0;
-	margin-bottom: 0;
-	margin-top: 1px;
-}
-
-select#UCFHBHeaderLinks {
-	height: 18px;
-	font-size: 11px;
-	color: #000000;
-	font-family: 'Lucida Grande', sans-serif;
-	border-radius: 0;
-	webkit-border-radius: 0;
-	moz-border-radius: 0;
-	margin-bottom: 0;
-	margin-top: 1px;
-	padding: 0;
-}
-
-
 /* Site Styles */
 
 .end {clear: both; height: 1px;}
@@ -69,13 +39,14 @@ select#UCFHBHeaderLinks {
 #home .search label{display: block; color: #C14D00; font-size: 16px; font-weight: normal; font-family: "Georgia", "serif";}
 #home .bottom{margin-top: 16px; border-top: none;}
 
-#header{margin-bottom: .5em;margin-top:20px;}
+#header { border-bottom: 1px dotted #666; padding-bottom: 8px; margin-bottom: .5em; margin-top:20px; }
+#header-menu { margin-bottom: 16px; }
 #header .social{}
 #header .social.menu.horizontal a{text-indent: -1024px;}
 #header .social.menu.horizontal li:after{content: "";}
 
 #footer-menu{ }
-#footer-widget-wrap { margin-top: 16px; }
+#footer { padding-top: 16px; }
 #footer .ucf{}
 #footer .info{position: relative; top: -10px;}
 #footer .info,

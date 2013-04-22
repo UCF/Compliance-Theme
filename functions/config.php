@@ -159,7 +159,7 @@ Orlando, FL  32816-0001',
 		new TextareaField(array(
 			'name'        => 'Home page blurb',
 			'id'          => THEME_OPTIONS_NAME.'[home_content]',
-			'description' => 'Content that goes at the top of the home page (above "the fold").',
+			'description' => 'Content that goes at the top of the home page (above "the fold").  Allows HTML and shortcode content.',
 			'value'       => $theme_options['home_content'],
 		)),
 		new SelectField(array(
