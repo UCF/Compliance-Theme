@@ -2,8 +2,12 @@
 <?php get_header(); the_post();?>
 	<div class="row page-content" id="<?=$post->post_name?>">
 		<div class="span12">
-			<article>
+			<header>
 				<h1><?php the_title();?></h1>
+			</header>
+		</div>
+		<div class="span11">
+			<article>
 				<?php the_content();?>
 			</article>
 		</div>

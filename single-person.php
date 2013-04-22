@@ -22,8 +22,8 @@
 			<a class="email" href="mailto:<?=$email?>"><?=$email?></a>
 			<? } ?>
 			</div>
-			<div class="span10">
-				<h2><?=$post->post_title?><?=($title == '') ?: ' - '.$title ?></h2>
+			<div class="span9">
+				<h1><?=$post->post_title?><?=($title == '') ?: ' - '.$title ?></h1>
 				<?=$content = str_replace(']]>', ']]>', apply_filters('the_content', $post->post_content))?>
 			</div>
 		</div>
