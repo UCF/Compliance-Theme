@@ -66,6 +66,7 @@ define('THEME_STATIC_URL', THEME_URL.'/static');
 define('THEME_IMG_URL', THEME_STATIC_URL.'/img');
 define('THEME_JS_URL', THEME_STATIC_URL.'/js');
 define('THEME_CSS_URL', THEME_STATIC_URL.'/css');
+define('THEME_FONT_URL', THEME_STATIC_URL.'/fonts');
 define('THEME_OPTIONS_GROUP', 'settings');
 define('THEME_OPTIONS_NAME', 'theme');
 define('THEME_OPTIONS_PAGE_TITLE', 'Theme Options');
@@ -270,6 +271,7 @@ if ($theme_options['bootstrap_enable_responsive'] == 1) {
 
 array_push(Config::$styles,	
 	plugins_url( 'gravityforms/css/forms.css' ),
+	THEME_FONT_URL.'/trocchi-fontfacekit/stylesheet.css',
 	THEME_CSS_URL.'/webcom-base.css', 
 	get_bloginfo('stylesheet_url')
 );
