@@ -1,4 +1,4 @@
-<?php disallow_direct_load('single.php');?>
+<?php disallow_direct_load('single-person.php');?>
 <?php get_header(); the_post();?>
 	<div class="page-content person-profile">
 		<div class="row">
@@ -27,6 +27,6 @@
 				<?=$content = str_replace(']]>', ']]>', apply_filters('the_content', $post->post_content))?>
 			</div>
 		</div>
-		<?php get_template_part('includes/below-the-fold'); ?>
 	</div>
+	<?=get_below_the_fold();?>
 <?php get_footer();?>

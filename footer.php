@@ -1,4 +1,5 @@
 			<div id="footer" class="row">
+				<hr class="span12" />
 				<div class="footer-widget-1 span3">
 					<?php if(!function_exists('dynamic_sidebar') or !dynamic_sidebar('Footer - Column One')):?>
 						<a class="ignore-external" href="http://www.ucf.edu"><img src="<?=THEME_IMG_URL?>/logo.png" alt="" title="" /></a>

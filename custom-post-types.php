@@ -638,5 +638,22 @@ class Page extends CustomPostType {
 			),
 		);
 	}
+	
+	public function get_objects_as_options($options=array()){
+		$objects = $this->get_objects($options);
+		$opt     = array();
+		foreach($objects as $o){
+			switch(True){
+				case $this->options('use_title'):
+					$opt[$o->post_title] = $o->ID;
+					break;
+				default:
+					$opt[$o->ID] = $o->ID;
+					break;
+			}
+		}
+		$opt = array('(None)' => 'none') + $opt;
+		return $opt;
+	}
 }
 ?>
