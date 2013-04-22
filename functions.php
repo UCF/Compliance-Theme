@@ -117,10 +117,10 @@ function get_home_featured_content() {
 			<?php
 				$page = get_post($f);
 				$title = $page->post_title;
-				$desc = get_post_meta($f->ID, 'page_description', true);
+				$desc = get_post_meta($f, 'page_description', true);
 			?>
 			<div class="<?=$spanclass?> home-feature">
-				<?=get_the_post_thumbnail($f->ID, 'thumbnail', array('class' => 'home-feature-icon'));?>
+				<?=get_the_post_thumbnail($f, 'thumbnail', array('class' => 'home-feature-icon'));?>
 				<div class="home-feature-textwrap">
 					<h3><?=$title?></h3>
 					<p><?=$desc?></p>
