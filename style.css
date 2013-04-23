@@ -6,39 +6,44 @@ Version: v0.0.0
 */
 
 /* Universal */
-body { overflow-x: hidden; }
+body { background: #fff url('static/img/gradient-blue.png') repeat-x top left; }
 body:after {
 	display: block;
 	content: '';
-	width: 978px;
-	height: 651px;
-	background: url('static/img/subpage-compass.png') center center no-repeat;
+	width: 419px;
+	height: 427px;
+	background: url('static/img/home-compass.png') center center no-repeat;
 	position: absolute;
-	top: 32px;
-	left: -150px;
+	top: 60px;
 	right: 0;
+	left: auto;
 	z-index: 1;
 }
 body > .container { position: relative; z-index: 2; }
 body > .container a { -webkit-transition: .15s ease-in-out; transition: .15s ease-in-out; }
+
 hr { 
-	color: #dedede;
-	border-top: 1px solid #dedede; 
-	border-bottom: 1px solid #ffffff; 
-	border-color: #dedede -moz-use-text-color #fff;
+	color: #8adfd4; 
+	border-top: 1px solid #8adfd4;
+	border-color: #8adfd4 -moz-use-text-color transparent;
+	border-bottom: 1px solid transparent; 
 }
 
+
+
 /* Header */
-#header { border-bottom: 1px solid #dedede; padding-bottom: 8px; margin-bottom: .5em; margin-top:20px; }
-#header h1 { line-height: 40px; font-size: 30px; margin: 5px 0; font-weight: 300; }
-#header h1 a { color: #000; }
-#header h1 a:hover { }
+#header { border-bottom: 1px solid #8adfd4; padding-bottom: 8px; margin-bottom: .5em; margin-top:20px; }
+#header h1 { line-height: 32px; font-size: 24px; margin: 5px 0; font-weight: 500; }
+#header h1 a { color: #fff; }
+#header h1 a:hover { color: #efefef; }
 
 /* Header menu */
 #header-menu-wrap {}
 #header-menu-wrap #header-menu { margin-bottom: 10px; }
-#header-menu-wrap #header-menu li a { color: #000; }
-#header-menu-wrap #header-menu li a:hover { }
+#header-menu-wrap #header-menu li a { color: #fff; text-decoration: underline; }
+#header-menu-wrap #header-menu li a:hover { color: #efefef; }
+
+
 
 /* Below the Fold */
 #below-the-fold { }
@@ -65,38 +70,12 @@ hr {
 #footer .menu li a:hover { text-decoration: underline; }
 
 
-/* Home */
-body.body-home { background: #fff url('static/img/gradient-blue.png') repeat-x top left; }
-body.body-home:after {
-	display: block;
-	content: '';
-	width: 419px;
-	height: 427px;
-	background: url('static/img/home-compass.png') center center no-repeat;
-	position: absolute;
-	top: 60px;
-	right: 0;
-	left: auto;
-	z-index: 1;
-}
-body.body-home #header { border-bottom: 1px solid #8adfd4; }
-body.body-home #header h1 { line-height: 32px; font-size: 24px; margin: 5px 0; font-weight: 500; }
-body.body-home #header h1 a { color: #fff; }
-body.body-home #header h1 a:hover { color: #efefef; }
-body.body-home #header-menu-wrap #header-menu li a { color: #fff; text-decoration: underline; }
-body.body-home #header-menu-wrap #header-menu li a:hover { color: #efefef; }
-body.body-home hr { 
-	color: #8adfd4; 
-	border-top: 1px solid #8adfd4;
-	border-color: #8adfd4 -moz-use-text-color transparent;
-	border-bottom: 1px solid transparent; 
-}
 
+/* Home */
 #home { }
 #home #home-content { font-family: 'TrocchiRegular', Georgia, serif; font-size: 30px; line-height: 45px; color: #1e5b53; }
 #home #home-content a { color: #fff; text-decoration: underline; }
 #home #home-content a:hover { color: #efefef; }
-
 
 /* Home features */
 #home-features {}
@@ -124,9 +103,10 @@ body.body-home hr {
 }
 
 
+
 /* Subpages */
 .row.page-content > .span12 > header { 
-	border-left: 8px solid #5bc7b9; 
+	border-left: 8px solid #1E5B53; 
 	padding-left: 22px; 
 	margin-bottom: 30px;
 }
@@ -135,14 +115,14 @@ body.body-home hr {
 	font-size: 32px;
 	line-height: 45px;
 	font-weight: 400;
-	color: #3db1a2;
+	color: #1E5B53;
 	margin-bottom: 0;
 }
 .row.page-content > .span12 > header p.desc {
 	font-family: 'TrocchiRegular', Georgia, serif;
 	font-size: 16px;
 	line-height: 29px;
-	color: #3db1a2;
+	color: #1E5B53;
 	margin-bottom: 0;
 }
 .row.page-content > .span11 > article { padding-left: 30px; }
@@ -151,7 +131,7 @@ article h1,
 article h2, 
 article h3,
 article h4 { 
-	color: #5bc7b9;
+	color: #1E5B53;
 	font-weight: 400;
 	font-family: 'TrocchiRegular', Georgia, serif;
 	margin-bottom: 0;
