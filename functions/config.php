@@ -12,32 +12,31 @@ function __init__(){
 	add_theme_support('menus');
 	add_theme_support('post-thumbnails');
 	register_nav_menu('header-menu', __('Header Menu'));
-	register_nav_menu('footer-menu', __('Footer Menu'));
 	register_sidebar(array(
 		'name' => __('Footer - Column One'),
 		'id' => 'bottom-one',
-		'description' => 'Far left column in footer on the bottom of pages.',
+		'description' => 'Far left column in footer on the bottom of pages. Intended to be used for a navigation menu.',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 	));
 	register_sidebar(array(
 		'name' => __('Footer - Column Two'),
 		'id' => 'bottom-two',
-		'description' => 'Second column from the left in footer, on the bottom of pages.',
+		'description' => 'Second column from the left in footer, on the bottom of pages. Intended to be used for a navigation menu.',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 	));
 	register_sidebar(array(
 		'name' => __('Footer - Column Three'),
 		'id' => 'bottom-three',
-		'description' => 'Third column from the left in footer, on the bottom of pages.',
+		'description' => 'Third column from the left in footer, on the bottom of pages. Intended to be used for a navigation menu.',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 	));
 	register_sidebar(array(
 		'name' => __('Footer - Column Four'),
 		'id' => 'bottom-four',
-		'description' => 'Far right in footer on the bottom of pages.',
+		'description' => 'Far right in footer on the bottom of pages. Your site contact info appears here by default.',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 	));
