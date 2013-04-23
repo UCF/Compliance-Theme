@@ -87,10 +87,9 @@ hr {
 	padding-right: 15px;
 	border-right: 1px solid #8adfd4;
 }
-#home-features .home-feature:last-child .home-feature-textwrap,
-#home-features .home-feature.last .home-feature-textwrap {
-	padding-right: 0; border-right: 0;
-}
+#home-features .home-feature.last .home-feature-textwrap { padding-right: 0; border-right: 0; }
+#home-features .home-feature:last-child .home-feature-textwrap { padding-right: 0; border-right: 0; }
+
 #home-features .home-feature .home-feature-textwrap h3 { 
 	margin-top: 0; 
 	margin-bottom: 5px;
