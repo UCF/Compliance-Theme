@@ -33,7 +33,7 @@ add_action('admin_menu', 'hide_admin_links');
 function get_below_the_fold($post_id=null) {
 	$options = get_option(THEME_OPTIONS_NAME);
 	$title	 = $options['btf_title'];
-	$blurb	 = $options['btf_blurb'];
+	$blurb	 = apply_filters('the_content', $options['btf_blurb']);
 	$cta	 = $options['btf_cta'];
 	$link	 = $options['btf_link'];
 	
@@ -47,7 +47,7 @@ function get_below_the_fold($post_id=null) {
 			</div>
 			<div class="span7" id="below-the-fold-content">
 				<h3><?=$title?></h3>
-				<p><?=$blurb?></p>
+				<?=$blurb?>
 			</div>
 			<div class="span3" id="below-the-fold-cta">
 				<a class="cta-btn" href="<?=do_shortcode($link);?>"><?=$cta?></a>
@@ -120,13 +120,13 @@ function get_home_featured_content() {
 			<?php
 				$page = get_post($f);
 				$title = $page->post_title;
-				$desc = get_post_meta($f, 'page_description', true);
+				$desc = apply_filters('the_content', get_post_meta($f, 'page_description', true));
 			?>
 			<div class="<?=$spanclass?> home-feature">
 				<?=get_the_post_thumbnail($f, 'thumbnail', array('class' => 'home-feature-icon'));?>
 				<div class="home-feature-textwrap">
 					<h3><a href="<?=get_permalink($page)?>"><?=$title?></a></h3>
-					<p><?=$desc?></p>
+					<?=$desc?>
 				</div>
 			</div>		
 		<?php } ?>

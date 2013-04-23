@@ -2,12 +2,12 @@
 <?php get_header(); ?>
 <?php
 	$options 		= get_option(THEME_OPTIONS_NAME);
-	$home_content 	= $options['home_content'];
+	$home_content 	= apply_filters('the_content', $options['home_content']);
 ?>
 	<div class="row page-content" id="home">
 		<div class="span10">
 			<article>
-				<p id="home-content"><?=$home_content;?></p>
+				<?=$home_content;?>
 			</article>
 		</div>
 	</div>
