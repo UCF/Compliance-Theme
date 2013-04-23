@@ -1,3 +1,9 @@
+@media (min-width: 1200px) {
+	#home-features .home-feature .home-feature-textwrap { 
+		min-height: 130px;
+	}
+}
+
 @media (max-width: 979px) {
 	#UCFHBSearch_and_links { display: none; }
 	#UCFHBHeader div.UCFHBWrapper { width: 100%; }
