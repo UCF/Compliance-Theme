@@ -142,8 +142,11 @@ function sc_person_picture_list($atts) {
 	foreach($people as $person) {
 		
 		$image_url = get_featured_image_url($person->ID);
-		
 		$link = ($person->post_content != '') ? True : False;
+		$title = get_post_meta($person->ID, 'person_jobtitle', True);
+		$phone = Person::get_phones($person);
+		$email = get_post_meta($person->ID, 'person_email', True);
+		
 		if( ($count % $row_size) == 0) {
 			if($count > 0) {
 				?></div><?
@@ -156,8 +159,22 @@ function sc_person_picture_list($atts) {
 			<? if($link) {?><a href="<?=get_permalink($person->ID)?>"><? } ?>
 				<img src="<?=$image_url ? $image_url : get_bloginfo('stylesheet_directory').'/static/img/no-photo.jpg'?>" />
 				<div class="name"><?=Person::get_name($person)?></div>
-				<div class="title"><?=get_post_meta($person->ID, 'person_jobtitle', True)?></div>
-				<? if($link) {?></a><?}?>
+				<?php if ($title) { ?>
+				<div class="title"><?=$title?></div>
+				<?php } ?>
+				<? if($link) {?></a><?php } ?>
+				<?php 
+					if ($phone) { 
+						foreach ($phone as $p) {
+				?>
+				<div class="phone"><?=$p?></div>
+				<?php 
+						}
+					} 
+				?>
+				<?php if ($email) { ?>
+				<div class="email"><a href="mailto:<?=$email?>"><?=$email?></a></div>
+				<?php } ?>
 		</div>
 		<?
 		$count++;
@@ -411,4 +428,24 @@ function sc_page_url($atts, $content=null) {
 	}
 }
 add_shortcode('page-url', 'sc_page_url');
+
+
+/**
+ * Output all site contact info, provided in Theme Options.
+ **/
+function sc_contact_info() { 
+	$options = get_option(THEME_OPTIONS_NAME);
+	ob_start(); ?>
+	<p class="contact-info">
+		<?php if($options['org_name']) { print '<strong>'.$options['org_name'].'</strong><br/>'; } ?>
+		<?php if($options['org_address']) { print nl2br($options['org_address']).'<br/>'; } ?>
+		<?php if($options['org_phone']) { 
+			print '<span class="contact-phone"><strong>Phone: </strong>'.$options['org_phone'].'</span><br/>'; } ?>
+		<?php if($options['org_fax']) { 
+			print '<span class="contact-fax"><strong>Fax: </strong>'.$options['org_fax'].'</span><br/>'; } ?>
+	</p>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode('contact-info', 'sc_contact_info');
 ?>
