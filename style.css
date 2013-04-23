@@ -39,7 +39,7 @@ hr {
 
 /* Header menu */
 #header-menu-wrap {}
-#header-menu-wrap #header-menu { margin-bottom: 10px; }
+#header-menu-wrap #header-menu { padding-bottom: 10px; }
 #header-menu-wrap #header-menu li a { color: #fff; text-decoration: underline; }
 #header-menu-wrap #header-menu li a:hover { color: #efefef; }
 
@@ -63,7 +63,7 @@ hr {
 #below-the-fold-cta a.cta-btn { margin-top: 15px; }
 
 /* Footer */
-#footer { margin-bottom: 40px; }
+#footer { padding-bottom: 40px; }
 #footer .menu { list-style-type: none; margin-left: 0; }
 #footer .menu li { margin-bottom: 4px; line-height: 20px; }
 #footer .menu li a { color: #000; font-size: 14px; }
@@ -87,7 +87,8 @@ hr {
 	padding-right: 15px;
 	border-right: 1px solid #8adfd4;
 }
-#home-features .home-feature:last-child .home-feature-textwrap {
+#home-features .home-feature:last-child .home-feature-textwrap,
+#home-features .home-feature.last .home-feature-textwrap {
 	padding-right: 0; border-right: 0;
 }
 #home-features .home-feature .home-feature-textwrap h3 { 
@@ -196,8 +197,8 @@ a.cta-btn:active {
 
 
 /* Person lists */
-.person-picture-list { margin-top: 10px; }
-.person-picture-wrap { margin-bottom: 50px; overflow: hidden; }
+.person-picture-list { padding-top: 10px; }
+.person-picture-wrap { padding-bottom: 50px; overflow: hidden; }
 .person-picture-wrap .name { font-weight: bold; margin-top: 10px; }
 .person-picture-wrap .title { margin-bottom: 3px; }
 .person-picture-wrap > a { text-decoration: none; color: #000; }
