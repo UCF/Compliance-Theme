@@ -43,7 +43,7 @@ hr {
 /* Below the Fold */
 #below-the-fold { }
 #below-the-fold-icon p { text-align: center; position: relative; margin-bottom: 0; }
-#below-the-fold-icon p img { }
+#below-the-fold-icon p img { padding-bottom: 5px; }
 
 #below-the-fold-content h3 { 
 	color: #333; 
@@ -54,7 +54,7 @@ hr {
 	margin-bottom: 5px; 
 }
 #below-the-fold-content p { font-weight: 300; font-size: 16px; line-height: 23px; margin-bottom: 0; }
-
+#below-the-fold-cta { text-align: center; }
 a.cta-btn {
 	display: inline-block;
 	text-align: center;
@@ -85,6 +85,7 @@ a.cta-btn:active {
 	transition: none;
 	-webkit-transition: none;
 }
+#below-the-fold-cta a.cta-btn { margin-top: 15px; }
 
 /* Footer */
 #footer { margin-bottom: 40px; }
@@ -171,15 +172,33 @@ body.body-home hr {
 	margin-bottom: 0;
 }
 .row.page-content > .span11 > article { padding-left: 30px; }
-.row.page-content > .span11 > article p { margin-bottom: 20px; line-height: 22px; }
+article p { margin-bottom: 20px; line-height: 22px; }
+article h1,
+article h2, 
+article h3,
+article h4 { 
+	color: #5bc7b9;
+	font-weight: 400;
+	font-family: 'TrocchiRegular', Georgia, serif;
+	margin-bottom: 0;
+}
+article h1 { font-size: 32px; line-height: 45px; }
+article h2 { font-size: 24px; line-height: 30px; }
+article h3 { font-size: 17px; line-height: 22px; }
+article h4 { font-size: 15px; line-height: 20px; }
+article h5 { margin-bottom: 0; }
+article h6 { margin-bottom: 2px; }
 
-.row.callout { 
+.callout { 
 	border: 1px solid #efefef; 
 	background: #EEF9F7; 
-	overflow: auto; 
-	width: 920px; 
+	box-shadow: none;
+	overflow: auto;
 }
-.row.callout h3,
-.row.callout p { font-size: 16px; line-height: 26px; }
-.row.callout h3 { color: #5bc7b9; }
-.row.callout p { font-weight: 300; }
+.callout .callout-content { float: left; width: 65%; }
+.callout h3,
+.callout p { font-size: 16px; line-height: 26px; }
+.callout h3,
+.callout h4 { font-family: 'HelveticaNeue', 'Helvetica-Neue', Helvetica, sans-serif; font-weight: bold; }
+.callout p { font-weight: 300; }
+.callout .callout-cta { text-align: center; float: right; width: 30%; }
