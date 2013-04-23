@@ -30,30 +30,33 @@ add_action('admin_menu', 'hide_admin_links');
  * @return string
  * @author Jo Greybill
  **/
-function get_below_the_fold() {
+function get_below_the_fold($post_id=null) {
 	$options = get_option(THEME_OPTIONS_NAME);
 	$title	 = $options['btf_title'];
 	$blurb	 = $options['btf_blurb'];
 	$cta	 = $options['btf_cta'];
 	$link	 = $options['btf_link'];
 	
-	ob_start(); 
-	?>
-	<div class="row" id="below-the-fold">
-		<hr class="span12" />
-		<div class="span2" id="below-the-fold-icon">
-			<p><img src="<?=THEME_IMG_URL?>/below-the-fold.png" alt="<?=$title?>" title="<?=$title?>" /></p>
-		</div>
-		<div class="span7" id="below-the-fold-content">
-			<h3><?=$title?></h3>
-			<p><?=$blurb?></p>
-		</div>
-		<div class="span3" id="below-the-fold-cta">
-			<a class="cta-btn" href="<?=do_shortcode($link);?>"><?=$cta?></a>
-		</div>
-	</div>	
-	<?php
-	return ob_get_clean();	
+	if ((!$post_id) || (is_numeric($post_id) && get_post_meta($post_id, 'page_hide_btf', true) !== 'on')) {
+		ob_start(); 
+		?>
+		<div class="row" id="below-the-fold">
+			<hr class="span12" />
+			<div class="span2" id="below-the-fold-icon">
+				<p><img src="<?=THEME_IMG_URL?>/below-the-fold.png" alt="<?=$title?>" title="<?=$title?>" /></p>
+			</div>
+			<div class="span7" id="below-the-fold-content">
+				<h3><?=$title?></h3>
+				<p><?=$blurb?></p>
+			</div>
+			<div class="span3" id="below-the-fold-cta">
+				<a class="cta-btn" href="<?=do_shortcode($link);?>"><?=$cta?></a>
+			</div>
+		</div>	
+		<?php
+		return ob_get_clean();	
+	}
+	return null;
 }
 
 

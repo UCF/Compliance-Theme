@@ -636,6 +636,12 @@ class Page extends CustomPostType {
 				'id'   => $prefix.'description',
 				'type' => 'textarea',
 			),
+			array(
+				'name' => 'Hide "Below the Fold" area',
+				'desc' => 'The Below the Fold area displays by default on all pages.  Check this box to disable it for this page.',
+				'id'   => $prefix.'hide_btf',
+				'type' => 'checkbox',
+			),
 		);
 	}
 	
