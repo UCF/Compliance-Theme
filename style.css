@@ -65,7 +65,7 @@ hr {
 /* Footer */
 #footer { padding-bottom: 40px; }
 #footer .menu { list-style-type: none; margin-left: 0; }
-#footer .menu li { margin-bottom: 4px; line-height: 20px; }
+#footer .menu li { margin-bottom: 8px; line-height: 15px; }
 #footer .menu li a { color: #000; font-size: 14px; }
 #footer .menu li a:hover { text-decoration: underline; }
 
@@ -226,3 +226,10 @@ a.cta-btn:active {
 #chief-officer .person-picture-wrap .phone, 
 #chief-officer .person-picture-wrap .email { margin-left: 150px; }
 #chief-officer .person-picture-wrap .name { margin-top: 50px; }
+
+
+
+/* Other shortcodes */
+.contact-info { }
+.contact-info a.contact-email { ext-decoration: underline; color: #666; }
+.contact-info a.contact-email:hover { color: #3db1a2; }

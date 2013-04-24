@@ -443,6 +443,8 @@ function sc_contact_info() {
 			print '<span class="contact-phone"><strong>Phone: </strong>'.$options['org_phone'].'</span><br/>'; } ?>
 		<?php if($options['org_fax']) { 
 			print '<span class="contact-fax"><strong>Fax: </strong>'.$options['org_fax'].'</span><br/>'; } ?>
+			<?php if($options['site_contact']) { 
+			print '<a class="contact-email" href="mailto:'.$options['site_contact'].'">'.$options['site_contact'].'</a><br/>'; } ?>
 	</p>
 	<?php
 	return ob_get_clean();
