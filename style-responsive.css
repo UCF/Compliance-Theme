@@ -21,6 +21,8 @@
 		min-height: 0;
 	}
 	
+	#footer #footer-widget-4 { margin-top: 20px; }
+	
 	.row.page-content > .span11 > article {
 		padding-left: 0;
 	}
@@ -70,6 +72,8 @@
 	
 	#header-menu-wrap #header-menu li a { color: #fff; line-height: 20px; text-decoration: none !important; }
 	#header-menu-wrap #header-menu li a:hover { color: #fff; }
+	
+	#home #home-content { font-size: 20px; line-height: 30px; }
 	
 	.callout .callout-content,
 	.callout .callout-cta { width: 100%; clear:both; }
