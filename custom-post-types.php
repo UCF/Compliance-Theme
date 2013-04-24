@@ -662,4 +662,22 @@ class Page extends CustomPostType {
 		return $opt;
 	}
 }
+
+
+class Post extends CustomPostType {
+	public
+		$name           = 'post',
+		$plural_name    = 'Posts',
+		$singular_name  = 'Post',
+		$add_new_item   = 'Add New Post',
+		$edit_item      = 'Edit Post',
+		$new_item       = 'New Post',
+		$public         = True,
+		$use_editor     = True,
+		$use_thumbnails = True,
+		$use_order      = False,
+		$use_title      = True,
+		$use_metabox    = False,
+		$built_in       = True;
+}
 ?>
