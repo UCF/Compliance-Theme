@@ -3,9 +3,13 @@
 
 <?php get_header(); the_post();?>
 	<div class="row page-content" id="page-not-found">
+		<div class="span12">
+			<header>
+				<h1>Page Not Found</h1>
+			</header>
+		</div>
 		<div class="span11">
 			<article>
-				<h1>Page Not Found</h1>
 				<?php 
 					$page = get_page_by_title('404');
 					if($page){
