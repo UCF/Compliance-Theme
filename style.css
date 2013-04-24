@@ -104,13 +104,15 @@ hr {
 
 
 
-/* Subpages */
-.row.page-content > .span12 > header { 
+/* Subpages, Single Person pages */
+.row.page-content > .span12 > header,
+.person-profile > .row > .span9 > header { 
 	border-left: 8px solid #1E5B53; 
 	padding-left: 22px; 
 	margin-bottom: 30px;
 }
-.row.page-content > .span12 > header h1 {
+.row.page-content > .span12 > header h1,
+.person-profile > .row > .span9 > header h1 {
 	font-family: 'TrocchiRegular', Georgia, serif;
 	font-size: 32px;
 	line-height: 45px;
@@ -118,7 +120,8 @@ hr {
 	color: #1E5B53;
 	margin-bottom: 0;
 }
-.row.page-content > .span12 > header p.desc {
+.row.page-content > .span12 > header p.desc,
+.person-profile > .row > .span9 > header p.desc {
 	font-family: 'TrocchiRegular', Georgia, serif;
 	font-size: 16px;
 	line-height: 29px;
@@ -126,6 +129,18 @@ hr {
 	margin-bottom: 0;
 }
 .row.page-content > .span11 > article { padding-left: 30px; }
+.person-profile > .row > .details { overflow: hidden; }
+.person-profile > .row > .details > aside > ul.phones {
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.person-profile > .row > .details > aside > a.email {
+	color: #666;
+	text-decoration: underline;
+}
+.person-profile > .row > .details > aside > a.email:hover {
+	color: #3db1a2;
+}
 article p { margin-bottom: 20px; line-height: 22px; }
 article h1,
 article h2, 
@@ -190,7 +205,7 @@ a.cta-btn:active {
 .callout p { font-size: 16px; line-height: 26px; }
 .callout h3,
 .callout h4 { font-family: 'HelveticaNeue', 'Helvetica-Neue', Helvetica, sans-serif; font-weight: bold; }
-.callout p { font-weight: 300; }
+.callout p { font-weight: 300; margin-bottom: 0; }
 .callout .callout-cta { text-align: center; float: right; width: 30%; }
 
 
