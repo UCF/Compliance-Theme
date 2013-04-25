@@ -14,7 +14,7 @@ Theme written off of Generic Theme for the University Compliance, Ethics, and Ri
 This theme relies on Twitter's Bootstrap framework. UCF's fork of the Bootstrap project (http://github.com/UCF/bootstrap/) is added as submodule in static/bootstrap. When deploying this theme, the submodule must be initialized and the correct branch of the Bootstrap repo should be checked out.
 
 1. If this is a brand new clone, run `git submodule update --init static/bootstrap` from the theme's root directory after cloning.  Alternatively when cloning, you can instead run the command `git clone --recursive` to clone the theme and its submodule(s).
-2. `cd static/bootstrap`, then checkout the `base` branch of the Bootstrap repo; `git checkout base`.  This branch's bootstrap resources should already be compiled.
+2. `cd static/bootstrap`, then checkout the `base-no1200` branch of the Bootstrap repo; `git checkout base-no1200`.  This branch's bootstrap resources should already be compiled.
 
 
 ## Development
