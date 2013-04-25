@@ -405,13 +405,6 @@ class Video extends CustomPostType{
 				'type' => 'textarea',
 				'std'  => ''
 			),
-			array(
-				'name' => 'Shortcode',
-				'desc' => 'To include this video in other posts, use the following shortcode:',
-				'id'   => 'video_shortcode',
-				'type' => 'shortcode',
-				'value' => '[video name="TITLE"]',
-			),
 		);
 	}
 }
@@ -453,13 +446,6 @@ class Publication extends CustomPostType{
 				'id'   => $prefix.'url',
 				'type' => 'text',
 				'std'  => '',
-			),
-			array(
-				'name' => 'Shortcode',
-				'desc' => 'To include this publication in other posts, use the following shortcode: <input disabled="disabled" type="text" value="[publication name=]" />',
-				'id'   => 'publication_shortcode',
-				'type' => 'help',
-				'value' => '[publication name="TITLE"]',
 			),
 		);
 	}
@@ -599,7 +585,7 @@ class Person extends CustomPostType
 								<?php } if($this->get_phones($person)) {?>
 									<ul class="unstyled"><?php foreach($this->get_phones($person) as $phone) { ?><li><?=$phone?></li><?php } ?></ul>
 								<?php } if(($link) && ($this->get_phones($person))) {?></a><?php }?></td>
-							<td class="email"><?=(($email != '') ? '<a href="mailto:'.$email.'">'.$email.'</a>' : '')?></td>
+							<td class="email"><?=(($email != '') ? '<i class="icon-envelope"></i> <a href="mailto:'.$email.'">Email</a>' : '')?></td>
 						</tr>
 				<? } ?>
 				</tbody>

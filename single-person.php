@@ -19,7 +19,7 @@
 				</ul>
 				<? } ?>
 				<? if($email != '') { ?>
-				<a class="email" href="mailto:<?=$email?>"><?=$email?></a>
+				<i class="icon-envelope"></i> <a class="email" href="mailto:<?=$email?>">Email</a>
 				<? } ?>
 				</aside>
 			</div>

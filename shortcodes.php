@@ -173,7 +173,7 @@ function sc_person_picture_list($atts) {
 					} 
 				?>
 				<?php if ($email) { ?>
-				<div class="email"><a href="mailto:<?=$email?>"><?=$email?></a></div>
+				<div class="email"><i class="icon-envelope"></i> <a href="mailto:<?=$email?>">Email</a></div>
 				<?php } ?>
 		</div>
 		<?
