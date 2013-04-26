@@ -68,7 +68,7 @@ define('THEME_CSS_URL', THEME_STATIC_URL.'/css');
 define('THEME_FONT_URL', THEME_STATIC_URL.'/fonts');
 define('THEME_OPTIONS_GROUP', 'settings');
 define('THEME_OPTIONS_NAME', 'theme');
-define('THEME_OPTIONS_PAGE_TITLE', 'Theme Options');
+define('THEME_OPTIONS_PAGE_TITLE', 'Page Customization');
 
 $theme_options = get_option(THEME_OPTIONS_NAME);
 define('GA_ACCOUNT', $theme_options['ga_account']);
@@ -102,60 +102,6 @@ Config::$body_classes = array('default',);
  **/
 $pageobj = new Page;
 Config::$theme_settings = array(
-	'Analytics' => array(
-		new TextField(array(
-			'name'        => 'Google WebMaster Verification',
-			'id'          => THEME_OPTIONS_NAME.'[gw_verify]',
-			'description' => 'Example: <em>9Wsa3fspoaoRE8zx8COo48-GCMdi5Kd-1qFpQTTXSIw</em>',
-			'default'     => null,
-			'value'       => $theme_options['gw_verify'],
-		)),
-		new TextField(array(
-			'name'        => 'Google Analytics Account',
-			'id'          => THEME_OPTIONS_NAME.'[ga_account]',
-			'description' => 'Example: <em>UA-9876543-21</em>. Leave blank for development.',
-			'default'     => null,
-			'value'       => $theme_options['ga_account'],
-		)),
-	),
-	'Contact Information' => array(
-		new TextField(array(
-			'name'        => 'Organization Name',
-			'id'          => THEME_OPTIONS_NAME.'[org_name]',
-			'description' => 'The name for your organization, used when displaying your organization\'s address.',
-			'value'       => $theme_options['org_name'],
-			'default'	  => 'University Compliance, Ethics and Risk',
-		)),
-		new TextareaField(array(
-			'name'        => 'Organization Address',
-			'id'          => THEME_OPTIONS_NAME.'[org_address]',
-			'description' => 'The address for your organization.',
-			'value'       => $theme_options['org_address'],
-			'default'	  => '4000 Central Florida Blvd.
-Millican Hall 350
-Orlando, FL  32816-0001',
-		)),
-		new TextField(array(
-			'name'        => 'Organization Phone Number',
-			'id'          => THEME_OPTIONS_NAME.'[org_phone]',
-			'description' => 'The phone number for your organization.',
-			'value'       => $theme_options['org_phone'],
-			'default'	  => '407-823-6263',
-		)),
-		new TextField(array(
-			'name'        => 'Organization Fax',
-			'id'          => THEME_OPTIONS_NAME.'[org_fax]',
-			'description' => 'The fax number for your organization.',
-			'value'       => $theme_options['org_fax'],
-			'default'	  => '407-823-6265',
-		)),
-		new TextField(array(
-			'name'        => 'Contact Email',
-			'id'          => THEME_OPTIONS_NAME.'[site_contact]',
-			'description' => 'Contact email address that visitors to your site can use to contact you.',
-			'value'       => $theme_options['site_contact'],
-		)),
-	),
 	'Home Page' => array(
 		new TextareaField(array(
 			'name'        => 'Home page blurb',
@@ -216,7 +162,61 @@ Orlando, FL  32816-0001',
 			'default'	  => '',
 		)),		
 	),
-	'Social' => array(
+	'Contact Information' => array(
+		new TextField(array(
+			'name'        => 'Organization Name',
+			'id'          => THEME_OPTIONS_NAME.'[org_name]',
+			'description' => 'The name for your organization, used when displaying your organization\'s address.',
+			'value'       => $theme_options['org_name'],
+			'default'	  => 'University Compliance, Ethics and Risk',
+		)),
+		new TextareaField(array(
+			'name'        => 'Organization Address',
+			'id'          => THEME_OPTIONS_NAME.'[org_address]',
+			'description' => 'The address for your organization.',
+			'value'       => $theme_options['org_address'],
+			'default'	  => '4000 Central Florida Blvd.
+Millican Hall 350
+Orlando, FL  32816-0001',
+		)),
+		new TextField(array(
+			'name'        => 'Organization Phone Number',
+			'id'          => THEME_OPTIONS_NAME.'[org_phone]',
+			'description' => 'The phone number for your organization.',
+			'value'       => $theme_options['org_phone'],
+			'default'	  => '407-823-6263',
+		)),
+		new TextField(array(
+			'name'        => 'Organization Fax',
+			'id'          => THEME_OPTIONS_NAME.'[org_fax]',
+			'description' => 'The fax number for your organization.',
+			'value'       => $theme_options['org_fax'],
+			'default'	  => '407-823-6265',
+		)),
+		new TextField(array(
+			'name'        => 'Contact Email',
+			'id'          => THEME_OPTIONS_NAME.'[site_contact]',
+			'description' => 'Contact email address that visitors to your site can use to contact you.',
+			'value'       => $theme_options['site_contact'],
+		)),
+	),
+	'Google Analytics' => array(
+		new TextField(array(
+			'name'        => 'Google WebMaster Verification',
+			'id'          => THEME_OPTIONS_NAME.'[gw_verify]',
+			'description' => 'Example: <em>9Wsa3fspoaoRE8zx8COo48-GCMdi5Kd-1qFpQTTXSIw</em>',
+			'default'     => null,
+			'value'       => $theme_options['gw_verify'],
+		)),
+		new TextField(array(
+			'name'        => 'Google Analytics Account',
+			'id'          => THEME_OPTIONS_NAME.'[ga_account]',
+			'description' => 'Example: <em>UA-9876543-21</em>. Leave blank for development.',
+			'default'     => null,
+			'value'       => $theme_options['ga_account'],
+		)),
+	),
+	'Facebook Metadata' => array(
 		new RadioField(array(
 			'name'        => 'Enable OpenGraph',
 			'id'          => THEME_OPTIONS_NAME.'[enable_og]',
@@ -236,7 +236,7 @@ Orlando, FL  32816-0001',
 			'value'       => $theme_options['fb_admins'],
 		)),
 	),
-	'Styles' => array(
+	'Site Styles' => array(
 		new RadioField(array(
 			'name'        => 'Enable Responsiveness',
 			'id'          => THEME_OPTIONS_NAME.'[bootstrap_enable_responsive]',

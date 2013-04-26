@@ -11,11 +11,107 @@
 		
 		<div class="sections">
 			<ul>
+				<li class="section"><a href="#updating">Updating Site Content</a></li>
 				<li class="section"><a href="#shortcodes">Shortcodes</a></li>
 			</ul>
 		</div>
 		<div class="fields">
 			<ul>
+				<li class="section" id="updating">
+					<h3>Updating Site Content</h3>
+					<p>Most of your site's content can be edited by going to the 
+					<a href="<?=admin_url('edit.php?post_type=page')?>">'Pages'</a> admin area and 
+					selecting the page you wish to edit.  Information about people can be edited through 
+					the <a href="<?=admin_url('edit.php?post_type=person')?>">'People' admin area</a>.  
+					Other sections, like the home page content and the site's headers and footers, 
+					are modifiable elsewhere.</p>
+					
+					<br/><hr /><br/>
+					
+					<h4>Updating the Home Page</h4>
+					<p>The home page is editable through the 
+					<a href="<?=admin_url('admin.php?page=theme-options')?>">Page Customization admin area</a>.
+					In the 'Home page blurb' field, you can edit the large text that appears at the top of the 
+					home page.  You can add shortcodes or HTML in this content if you'd like.</p>
+					<p>Note:  make sure that this content always starts with </p>
+					<pre style="white-space: pre-line;"><code>< p id="home-content" ></code></pre> 
+					<p>and ends with </p>
+					<pre><code>< /p ></code></pre><p>(no spaces between the < > brackets.)  This applies the 
+					special styling to the text in the home page blurb (large green text.)</p>
+					<p>The Featured Page 1, 2, and 3 refer to pages that you've published that you want to 
+					display on the home page, under the large text at the top.  You can specify up to 3, 
+					or you can select (none) for any of them to remove those columns.  Selecting (none) 
+					for all 3 Features will hide the entire row that they appear on.</p>
+					
+					<br/><hr /><br/>
+					
+					<h4>Updating the "Below the Fold"</h4>
+					<p>The Below the Fold area refers to the space just above the footer, which 
+					contains a megaphone icon, a title, description, and large green button.  
+					This content is modifiable in the 
+					<a href="<?=admin_url('admin.php?page=theme-options#below-the-fold')?>">Page Customization admin area</a>.  
+					Here, you can modify the bolded title area, the blurb beneath it, the text in the green 
+					button, and what the green button links to.</p>
+					
+					<br/><hr /><br/>
+					
+					<h4>Updating the Header Menu</h4>
+					<p>The site's header menu can be modified from the 
+					<a href="<?=admin_url('nav-menus.php')?>">Appearance > Menus</a> admin 
+					area.  At the top of this screen, make sure to select the menu labeled 
+					'Header Navigation'.</p>
+					<p>When the Header Navigation menu editor loads, you 
+					can drag and drop any of the pages that are already listed to re-order them, 
+					or you can add another existing page by checking a page under the 'Pages' 
+					box, and clicking the 'Add to Menu' button.  You can also add any 
+					arbitrary link, whether it be within your site or on an external site, by 
+					typing the URL and a label for the link in the 'Custom Links' box, and clicking 
+					the 'Add to Menu' button.</p>
+					<p>When you're finished editing the menu, click the blue 'Save Menu' button.</p>
+					
+					<br/><hr /><br/>
+					
+					<h4>Updating the Footer</h4>
+					<p>The site footer consists of 4 columns; 3 of these contain custom navigation 
+					menus, and the last one is empty, but outputs your organization's contact 
+					information by default.  These columns are customizable by adding or 
+					removing what are called 'widgets' in WordPress.</p>
+					<p>Widgets are modifiable from the 
+					<a href="<?=admin_url('widgets.php')?>">Appearance > Widgets</a> admin area.  On the 
+					left is a list of all available widgets; on the right is a list of all available 
+					columns that widgets can be dropped into.  Widgets on the left can be dragged 
+					and dropped into any of the columns on the right.</p>
+					<p>Currently, there are Custom Menu widgets in Footer Columns 1, 2, and 3.  If 
+					you expand a Custom Menu widget (click the down arrow next to the name of the 
+					widget), you can modify the title of the menu that is displayed, and the custom 
+					menu that should appear.</p>
+					<p>Custom Menu widgets allow you to place an existing menu into a footer column.  
+					To modify an existing menu, you can access the menu editor from the 
+					<a href="<?=admin_url('nav-menus.php')?>">Appearance > Menus</a> admin 
+					area.  Follow the steps above for updating the header menu, except select any 
+					one of the 3 Footer Nav menus to modify.</p>
+					<p>By default, the 4th footer column will display your site's contact information.  
+					If you want to display something else there, simply add a widget to the Footer 
+					Column Four.  If you want to display your site's contact information and some 
+					other content above or below, you'll need to create a new widget for the 
+					contact information, as well as a widget for the new content you want to add.  
+					To re-add the contact information, simply drag a new Text widget into Footer 
+					Column Four, leave the title blank, and type the shortcode </p>
+					<pre><code>[contact-info]</code></pre> 
+					<p>into the large text area.  Click the 'Save' button when finished.</p>
+					<p>Next, create whatever new type of widget you want to add to Column Four by 
+					dragging a new widget into Footer Column Four, placing it either above or below 
+					the Text widget with the site contact shortcode.  Make sure to save any changes.</p>
+					
+					<br/><hr /><br/>
+					
+					<h4>Updating Your Site's Contact Information</h4>
+					<p>Your site's contact information is modifiable from the 
+					<a href="<?=admin_url('admin.php?page=theme-options#contact-information')?>">Page Customization admin area</a>.  
+					Any information modified here will automatically be updated anywhere the </p>
+					<pre><code>[contact-info]</code></pre>
+					<p>shortcode is used, including the footer.</p>
+				</li>
 				
 				<li class="section" id="shortcodes">
 					<h3>Shortcodes</h3>
