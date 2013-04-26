@@ -39,8 +39,8 @@ hr {
 
 /* Header menu */
 #header-menu-wrap {}
-#header-menu-wrap #header-menu { padding-bottom: 10px; }
-#header-menu-wrap #header-menu li a { color: #fff; text-decoration: underline; }
+#header-menu-wrap #header-menu { padding-bottom: 16px; margin-bottom: 0; padding-top: 5px; }
+#header-menu-wrap #header-menu li a { color: #fff; }
 #header-menu-wrap #header-menu li a:hover { color: #efefef; }
 
 
