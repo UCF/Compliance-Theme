@@ -20,7 +20,7 @@ body:after {
 	z-index: 1;
 }
 body > .container { position: relative; z-index: 2; }
-body > .container a { -webkit-transition: .15s ease-in-out; transition: .15s ease-in-out; }
+body > .container a { -webkit-transition: .15s ease-in-out; transition: .15s ease-in-out;}
 
 hr { 
 	color: #8adfd4; 
@@ -74,7 +74,7 @@ hr {
 /* Home */
 #home { }
 #home #home-content { font-family: 'TrocchiRegular', Georgia, serif; font-size: 30px; line-height: 45px; color: #1e5b53; }
-#home #home-content a { color: #fff; text-decoration: underline; }
+#home #home-content a { color: #fff; text-decoration: none; }
 #home #home-content a:hover { color: #efefef; }
 
 /* Home features */
