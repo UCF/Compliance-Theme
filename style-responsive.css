@@ -43,6 +43,7 @@
 		float: none;
 		margin: 0;
 		line-height: 13px;
+		padding-bottom: 4px;
 	}
 	.navbar ul#header-menu li a, 
 	.navbar ul#header-menu .dropdown-menu li > a:hover, 
