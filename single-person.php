@@ -32,6 +32,7 @@
 					<?=$content = str_replace(']]>', ']]>', apply_filters('the_content', $post->post_content))?>
 				</article>
 			</div>
+			<div class="span12 end-page-content"></div>
 		</div>
 	</div>
 	<?=get_below_the_fold();?>

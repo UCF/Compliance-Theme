@@ -41,15 +41,14 @@ function get_below_the_fold($post_id=null) {
 		ob_start(); 
 		?>
 		<div class="row" id="below-the-fold">
-			<hr class="span12" />
 			<div class="span2" id="below-the-fold-icon">
 				<p><img src="<?=THEME_IMG_URL?>/below-the-fold.png" alt="<?=$title?>" title="<?=$title?>" /></p>
 			</div>
-			<div class="span7" id="below-the-fold-content">
+			<div class="span6" id="below-the-fold-content">
 				<h3><?=$title?></h3>
 				<?=$blurb?>
 			</div>
-			<div class="span3" id="below-the-fold-cta">
+			<div class="span4" id="below-the-fold-cta">
 				<a class="cta-btn" href="<?=do_shortcode($link);?>"><?=$cta?></a>
 			</div>
 		</div>	
@@ -115,21 +114,24 @@ function get_home_featured_content() {
 		ob_start();
 	?>
 		<div class="row" id="home-features">
-			<hr class="span12" />
-		<?php foreach ($features as $f) { ?>
-			<?php
-				$page = get_post($f);
-				$title = $page->post_title;
-				$desc = apply_filters('the_content', get_post_meta($f, 'page_description', true));
-			?>
-			<div class="<?=$spanclass?> home-feature">
-				<?=get_the_post_thumbnail($f, 'thumbnail', array('class' => 'home-feature-icon'));?>
-				<div class="home-feature-textwrap">
-					<h3><a href="<?=get_permalink($page)?>"><?=$title?></a></h3>
-					<?=$desc?>
+			<div class="span12" id="home-features-wrap">
+				<div class="row">
+				<?php foreach ($features as $f) { ?>
+					<?php
+						$page = get_post($f);
+						$title = $page->post_title;
+						$desc = apply_filters('the_content', get_post_meta($f, 'page_description', true));
+					?>
+					<div class="<?=$spanclass?> home-feature">
+						<?=get_the_post_thumbnail($f, 'thumbnail', array('class' => 'home-feature-icon'));?>
+						<div class="home-feature-textwrap">
+							<h3><a href="<?=get_permalink($page)?>"><?=$title?></a></h3>
+							<?=$desc?>
+						</div>
+					</div>		
+				<?php } ?>
 				</div>
-			</div>		
-		<?php } ?>
+			</div>	
 		</div>
 	<?php
 		return ob_get_clean();

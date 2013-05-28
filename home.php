@@ -5,7 +5,7 @@
 	$home_content 	= apply_filters('the_content', $options['home_content']);
 ?>
 	<div class="row page-content" id="home">
-		<div class="span10">
+		<div class="span12">
 			<article>
 				<?=$home_content;?>
 			</article>

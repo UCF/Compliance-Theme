@@ -210,6 +210,30 @@ var lastHomeFeature = function($) {
 	$('#home-features .home-feature:last-child').addClass('last');
 }
 
+var btfHeightAdjust = function($) {
+	// Make sure the CTA button in the Below the Fold spans the
+	// full height of the row
+	var adjustHeights = function() {
+		var contentCol = $('#below-the-fold-content'),
+			ctaCol	   = $('#below-the-fold-cta');
+		if ($(window).innerWidth() > 767) {
+			if (contentCol.height() >= ctaCol.height()) {
+				ctaCol.height(contentCol.height());
+			}
+			else {
+				ctaCol.css('height', 'auto');
+			}
+		}
+		else {
+			ctaCol.css('height', 'auto');
+		}
+	}
+	adjustHeights();
+	$(window).resize(function() {
+		adjustHeights();
+	});
+}
+
 if (typeof jQuery != 'undefined'){
 	jQuery(document).ready(function($) {
 		Webcom.slideshow($);
@@ -223,5 +247,6 @@ if (typeof jQuery != 'undefined'){
 		Generic.PostTypeSearch($);
 		
 		lastHomeFeature($);
+		btfHeightAdjust($);
 	});
 }else{console.log('jQuery dependancy failed to load');}
