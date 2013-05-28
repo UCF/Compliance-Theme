@@ -90,7 +90,7 @@ hr {
 	padding-left: 22px; 
 }
 #home #home-content a { color: #a5b6b9; text-decoration: none; }
-#home #home-content a:hover { color: #59C7B9; }
+#home #home-content a:hover { color: #006C7F; }
 
 /* Home features */
 #home-features { }
@@ -114,9 +114,8 @@ hr {
 	font-weight: 300; 
 	color: #1e5b53;
 }
-#home-features .home-feature .home-feature-textwrap h3 a { 
-	color: #108ea6;
-}
+#home-features .home-feature .home-feature-textwrap h3 a { color: #108ea6; }
+#home-features .home-feature .home-feature-textwrap h3 a:hover { color: #006C7F; }
 
 
 
@@ -156,7 +155,7 @@ hr {
 	text-decoration: underline;
 }
 .person-profile > .row > .details > aside > a.email:hover {
-	color: #3db1a2;
+	color: #006C7F;
 }
 article p { margin-bottom: 20px; line-height: 22px; }
 article h1,
@@ -175,7 +174,7 @@ article h4 { font-size: 15px; line-height: 20px; }
 article h5 { margin-bottom: 0; }
 article h6 { margin-bottom: 2px; }
 article a { text-decoration: underline; color: #666; }
-article a:hover { color: #3db1a2; }
+article a:hover { color: #006C7F; }
 article ol, article ul { margin-left: 40px; margin-bottom: 20px; }
 
 a.cta-btn {
@@ -206,7 +205,7 @@ a.cta-btn:hover {
 	background: linear-gradient(to bottom,  #0b8ca4 0%,#44a2b3 100%); /* W3C */
 }
 a.cta-btn:active {
-	background: #1cb9a5;
+	background: #006C7F;
 	transition: none;
 	-webkit-transition: none;
 }
@@ -237,7 +236,7 @@ a.cta-btn:active {
 .person-picture-wrap > a { text-decoration: none; color: #000; }
 .person-picture-wrap > a .name { text-decoration: underline; }
 .person-picture-wrap .email a { text-decoration: underline; color: #666; }
-.person-picture-wrap .email a:hover { color: #3db1a2; }
+.person-picture-wrap .email a:hover { color: #006C7F; }
 #chief-officer .person-picture-wrap { width: 400px; }
 #chief-officer .person-picture-wrap img { float: left; }
 #chief-officer .person-picture-wrap .name,
@@ -251,4 +250,4 @@ a.cta-btn:active {
 /* Other shortcodes */
 .contact-info { }
 .contact-info a.contact-email { ext-decoration: underline; color: #666; }
-.contact-info a.contact-email:hover { color: #3db1a2; }
+.contact-info a.contact-email:hover { color: #006C7F; }
