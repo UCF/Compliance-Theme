@@ -45,19 +45,20 @@
 		
 	</head>
 	<body class="<?=body_classes()?> <?php if (is_home()) { ?>body-home<?php } ?>">
-		<div class="container">
-			<div class="row">
-				<div id="header" class="span12">
-					<h1><a href="<?=bloginfo('url')?>"><?=bloginfo('name')?></a></h1>
+		<div class="bgwrap">
+			<div class="container">
+				<div class="row">
+					<div id="header" class="span12">
+						<h1><a href="<?=bloginfo('url')?>"><?=bloginfo('name')?></a></h1>
+					</div>
 				</div>
-			</div>
-			<?=wp_nav_menu(array(
-				'theme_location' => 'header-menu', 
-				'container' => 'div',
-				'container_class' => 'row', 
-				'container_id' => 'header-menu-wrap',
-				'menu_class' => 'span12 menu '.get_header_styles(), 
-				'menu_id' => 'header-menu', 
-				'walker' => new Bootstrap_Walker_Nav_Menu()
-				));
+				<?=wp_nav_menu(array(
+					'theme_location' => 'header-menu', 
+					'container' => 'div',
+					'container_class' => 'row', 
+					'container_id' => 'header-menu-wrap',
+					'menu_class' => 'span12 menu '.get_header_styles(), 
+					'menu_id' => 'header-menu', 
+					'walker' => new Bootstrap_Walker_Nav_Menu()
+					));
 			?>
