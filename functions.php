@@ -41,10 +41,10 @@ function get_below_the_fold($post_id=null) {
 		ob_start(); 
 		?>
 		<div class="row" id="below-the-fold">
-			<div class="span2" id="below-the-fold-icon">
-				<p><img src="<?=THEME_IMG_URL?>/below-the-fold.png" alt="<?=$title?>" title="<?=$title?>" /></p>
+			<div class="span3" id="below-the-fold-icon">
+				<p><a href="<?=do_shortcode($link);?>"><img src="<?=THEME_IMG_URL?>/below-the-fold.png" alt="<?=$title?>" title="<?=$title?>" /></a></p>
 			</div>
-			<div class="span6" id="below-the-fold-content">
+			<div class="span5" id="below-the-fold-content">
 				<h3><?=$title?></h3>
 				<?=$blurb?>
 			</div>
