@@ -42,7 +42,7 @@ hr {
 /* Below the Fold */
 #below-the-fold { }
 #below-the-fold-icon p { text-align: center; position: relative; margin-bottom: 0; }
-#below-the-fold-icon p img { padding-top: 3px; }
+#below-the-fold-icon p img { padding-top: 16px; }
 #below-the-fold-icon,
 #below-the-fold-content,
 #below-the-fold-cta { padding: 20px 0; }

@@ -9,6 +9,8 @@
 	#UCFHBHeader div.UCFHBWrapper { width: 100%; }
 	
 	#home #home-content { font-size: 26px; line-height: 40px; }
+
+	#below-the-fold-icon { padding-top: 22px; }
 }
 
 @media (max-width: 767px) {
@@ -21,7 +23,7 @@
 		min-height: 0;
 	}
 
-	#below-the-fold-icon { padding-bottom: 0; }
+	#below-the-fold-icon { padding-bottom: 0; padding-top: 0; }
 	
 	#footer #footer-widget-4 { margin-top: 20px; }
 	
