@@ -42,11 +42,11 @@ hr {
 /* Below the Fold */
 #below-the-fold { }
 #below-the-fold-icon p { text-align: center; position: relative; margin-bottom: 0; }
-#below-the-fold-icon p img { padding-top: 16px; }
+#below-the-fold-icon p img { padding-top: 24px; }
 #below-the-fold-icon,
 #below-the-fold-content,
 #below-the-fold-cta { padding: 20px 0; }
-#below-the-fold-cta { background: #e6f3f6; }
+#below-the-fold-cta { background: #ffffff; }
 
 #below-the-fold-content h3 { 
 	color: #333; 
@@ -179,7 +179,7 @@ a.cta-btn {
 	font-weight: bold;
 	color: #fff;
 	text-decoration: none;
-	padding: 15px 20px;
+	padding: 24px 20px;
 	border-radius: 10px;
 	border: 2px solid #fff;
 	box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
