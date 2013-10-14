@@ -36,9 +36,9 @@ function get_below_the_fold($post_id=null) {
 	$blurb	 = apply_filters('the_content', $options['btf_blurb']);
 	$cta	 = $options['btf_cta'];
 	$link	 = $options['btf_link'];
-	
+
 	if ((!$post_id) || (is_numeric($post_id) && get_post_meta($post_id, 'page_hide_btf', true) !== 'on')) {
-		ob_start(); 
+		ob_start();
 		?>
 		<div class="row" id="below-the-fold">
 			<div class="span4" id="below-the-fold-icon">
@@ -51,9 +51,9 @@ function get_below_the_fold($post_id=null) {
 			<div class="span3" id="below-the-fold-cta">
 				<a class="cta-btn" href="<?=do_shortcode($link);?>"><?=$cta?></a>
 			</div>
-		</div>	
+		</div>
 		<?php
-		return ob_get_clean();	
+		return ob_get_clean();
 	}
 	return null;
 }
@@ -62,11 +62,11 @@ function get_below_the_fold($post_id=null) {
 /**
  * Return the home page featured content.
  * This function is flexible and accounts for the number
- * of features specified in the Theme Options, returning the 
+ * of features specified in the Theme Options, returning the
  * correct Bootstrap .span's to accomodate what is specified.
  *
  * @return string
- * @author Jo Greybill 
+ * @author Jo Greybill
  **/
 function get_home_featured_content() {
 	$options 		= get_option(THEME_OPTIONS_NAME);
@@ -75,7 +75,7 @@ function get_home_featured_content() {
 	$feature_2 		= $options['home_feature_2'];
 	$feature_3 		= $options['home_feature_3'];
 	$features		= array($feature_1, $feature_2, $feature_3);
-	
+
 	// Set our $feature_cols value based on features
 	// that point to some page content, and unset any
 	// features from the $features array that don't point
@@ -92,7 +92,7 @@ function get_home_featured_content() {
 				break;
 		}
 	}
-	
+
 	// Determine the Bootstrap classes for the feature
 	// pieces based on the number of features set to display
 	switch ($feature_cols) {
@@ -109,8 +109,8 @@ function get_home_featured_content() {
 			$spanclass = 'span4';
 			break;
 	}
-	
-	if ($feature_cols > 0) { 
+
+	if ($feature_cols > 0) {
 		ob_start();
 	?>
 		<div class="row" id="home-features">
@@ -128,14 +128,26 @@ function get_home_featured_content() {
 							<h3><a href="<?=get_permalink($page)?>"><?=$title?></a></h3>
 							<?=$desc?>
 						</div>
-					</div>		
+					</div>
 				<?php } ?>
 				</div>
-			</div>	
+			</div>
 		</div>
 	<?php
 		return ob_get_clean();
 	}
 }
-	
+
+/**
+ * Add ID attribute to registered University Header script.
+ **/
+function add_id_to_ucfhb($url) {
+    if ( (false !== strpos($url, 'bar/js/university-header.js')) || (false !== strpos($url, 'bar/js/university-header-full.js')) ) {
+      remove_filter('clean_url', 'add_id_to_ucfhb', 10, 3);
+      return "$url' id='ucfhb-script";
+    }
+    return $url;
+}
+add_filter('clean_url', 'add_id_to_ucfhb', 10, 3);
+
 ?>
