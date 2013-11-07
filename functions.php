@@ -25,39 +25,43 @@ add_action('admin_menu', 'hide_admin_links');
 
 
 /**
+ * Temporarily disabled on Nov 7 - below the fold content not ready to be realeased to users.
+ * - Roger
+ * 
  * Display the Below the Fold content for this theme.
  *
  * @return string
  * @author Jo Greybill
+ * 
+ * function get_below_the_fold($post_id=null) {
+ * 	$options = get_option(THEME_OPTIONS_NAME);
+ * 	$title	 = $options['btf_title'];
+ * 	$blurb	 = apply_filters('the_content', $options['btf_blurb']);
+ * 	$cta	 = $options['btf_cta'];
+ * 	$link	 = $options['btf_link'];
+ * 
+ * 	if ((!$post_id) || (is_numeric($post_id) && get_post_meta($post_id, 'page_hide_btf', true) !== 'on')) {
+ * 		ob_start();
+ * 		?>
+ * 		<div class="row" id="below-the-fold">
+ * 			<div class="span4" id="below-the-fold-icon">
+ * 				<p><a href="<?=do_shortcode($link);?>"><img src="<?=THEME_IMG_URL?>/below-the-fold.png" alt="<?=$title?>" title="<?=$title?>" /></a></p>
+ * 			</div>
+ * 			<div class="span5" id="below-the-fold-content">
+ * 				<h3><?=$title?></h3>
+ * 				<?=$blurb?>
+ * 			</div>
+ * 			<div class="span3" id="below-the-fold-cta">
+ * 				<a class="cta-btn" href="<?=do_shortcode($link);?>"><?=$cta?></a>
+ * 			</div>
+ * 		</div>
+ * 		<?php
+ * 		return ob_get_clean();
+ * 	}
+ * 	return null;
+ * }
+ * 
  **/
-function get_below_the_fold($post_id=null) {
-	$options = get_option(THEME_OPTIONS_NAME);
-	$title	 = $options['btf_title'];
-	$blurb	 = apply_filters('the_content', $options['btf_blurb']);
-	$cta	 = $options['btf_cta'];
-	$link	 = $options['btf_link'];
-
-	if ((!$post_id) || (is_numeric($post_id) && get_post_meta($post_id, 'page_hide_btf', true) !== 'on')) {
-		ob_start();
-		?>
-		<div class="row" id="below-the-fold">
-			<div class="span4" id="below-the-fold-icon">
-				<p><a href="<?=do_shortcode($link);?>"><img src="<?=THEME_IMG_URL?>/below-the-fold.png" alt="<?=$title?>" title="<?=$title?>" /></a></p>
-			</div>
-			<div class="span5" id="below-the-fold-content">
-				<h3><?=$title?></h3>
-				<?=$blurb?>
-			</div>
-			<div class="span3" id="below-the-fold-cta">
-				<a class="cta-btn" href="<?=do_shortcode($link);?>"><?=$cta?></a>
-			</div>
-		</div>
-		<?php
-		return ob_get_clean();
-	}
-	return null;
-}
-
 
 /**
  * Return the home page featured content.

@@ -14,5 +14,7 @@
 		</div>
 		<div class="span12 end-page-content"></div>
 	</div>
-	<?=get_below_the_fold($post->ID);?>
+<!--
+<// ?=get_below_the_fold($post->ID);?>
+-->
 <?php get_footer();?>

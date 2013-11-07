@@ -13,6 +13,7 @@
 	</div>
 	<?=get_home_featured_content();?>
 	
-	<?=get_below_the_fold();?>
-	
+<!--
+<// ?=get_below_the_fold();?>
+-->
 <?php get_footer();?>
