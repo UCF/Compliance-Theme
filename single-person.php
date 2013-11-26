@@ -35,5 +35,5 @@
 			<div class="span12 end-page-content"></div>
 		</div>
 	</div>
-	<?=get_below_the_fold();?>
+<!--	<// ?=get_below_the_fold();?>-->
 <?php get_footer();?>
