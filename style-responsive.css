@@ -9,6 +9,7 @@
 	#UCFHBHeader div.UCFHBWrapper { width: 100%; }
 	
 	#home #home-content { font-size: 26px; line-height: 40px; }
+	#announcements > * { padding-left: 15px; }
 
 	#below-the-fold-icon { padding-top: 22px; }
 }
@@ -17,6 +18,8 @@
 	#UCFHBHeader { margin-left: -20px; width: 100%; padding-right: 40px; }
 	
 	#home #home-content { font-size: 22px; line-height: 36px; }
+	#announcements > * { padding-left: 0; }
+	#announcements h3 { margin-top: 0; }
 	#home-features .home-feature .home-feature-textwrap {
 		border-right: 0;
 		padding-right: 0;

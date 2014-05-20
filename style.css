@@ -23,24 +23,21 @@ hr {
 }
 
 
-
 /* Header */
 #header { border-bottom: 1px solid #dedede; padding-bottom: 8px; margin-top:20px; }
 #header h1 { line-height: 38px; font-size: 30px; margin: 5px 0; font-weight: 300; }
 #header h1 a { color: #333; }
 #header h1 a:hover { color: #666; }
 
+
 /* Header menu */
-#header-menu-wrap {}
 .menu.horizontal li { margin: 0; padding: 0 12px 16px 0; }
 #header-menu-wrap #header-menu { padding-bottom: 16px; margin-bottom: 0; padding-top: 10px; }
 #header-menu-wrap #header-menu li a { color: #333; }
 #header-menu-wrap #header-menu li a:hover { color: #666; }
 
 
-
 /* Below the Fold */
-#below-the-fold { }
 #below-the-fold-icon p { text-align: center; position: relative; margin-bottom: 0; }
 #below-the-fold-icon p img { padding-top: 24px; }
 #below-the-fold-icon,
@@ -48,7 +45,8 @@ hr {
 #below-the-fold-cta { padding: 20px 0; }
 #below-the-fold-cta { background: #ffffff; }
 
-#below-the-fold-content h3 { 
+#below-the-fold-content h3,
+#home h3 { 
 	color: #333; 
 	font-size: 18px; 
 	line-height: 26px; 
@@ -60,6 +58,7 @@ hr {
 #below-the-fold-cta { text-align: center; overflow: auto; }
 #below-the-fold-cta a.cta-btn { margin-top: 15px; margin-bottom: 15px; }
 
+
 /* Footer */
 #footer { padding-bottom: 40px; padding-top: 0; }
 #footer #footer-wrap { border-top: 1px solid #dedede; }
@@ -70,25 +69,29 @@ hr {
 #footer .menu li a:hover { text-decoration: underline; }
 
 
-
 /* Home */
-#home { }
-#home > div { border-bottom: 1px solid #dedede; padding-bottom: 20px; }
+#home a { color: #108ea6; }
+#home a:hover { color: #006C7F; }
 #home #home-content { 
 	font-family: 'TrocchiRegular', Georgia, serif; 
 	font-size: 30px; 
 	line-height: 45px; 
 	color: #50acbe; 
 	border-left: 8px solid #50ACBE; 
-	padding-left: 22px; 
+	padding-left: 22px;
 }
 #home #home-content a { color: #a5b6b9; text-decoration: none; }
 #home #home-content a:hover { color: #006C7F; }
 
+
+/* Home announcements */
+#announcements > * { padding-left: 20px; }
+#announcements h3 { margin-top: 10px; }
+#announcements ul li { margin-top: 8px; margin-bottom: 8px; line-height: 18px; }
+
+
 /* Home features */
-#home-features { }
-#home-features #home-features-wrap { border-bottom: 1px solid #dedede; padding: 20px 0; }
-#home-features .home-feature {}
+#home-features #home-features-wrap { border-bottom: 1px solid #dedede; padding: 0 0 20px 0; }
 #home-features .home-feature .home-feature-icon { float: left; }
 #home-features .home-feature .home-feature-textwrap { 
 	margin-left: 40px; 
@@ -99,7 +102,7 @@ hr {
 #home-features .home-feature.last .home-feature-textwrap { padding-right: 0; border-right: 0; }
 #home-features .home-feature:last-child .home-feature-textwrap { padding-right: 0; border-right: 0; }
 
-#home-features .home-feature .home-feature-textwrap h3 { 
+#home-features h3 { 
 	margin-top: 0; 
 	margin-bottom: 5px;
 	line-height: 26px; 
@@ -107,9 +110,8 @@ hr {
 	font-weight: 300; 
 	color: #1e5b53;
 }
-#home-features .home-feature .home-feature-textwrap h3 a { color: #108ea6; }
-#home-features .home-feature .home-feature-textwrap h3 a:hover { color: #006C7F; }
-
+#home-features h3 a { color: #108ea6; }
+#home-features h3 a:hover { color: #006C7F; }
 
 
 /* Subpages, Single Person pages */
@@ -214,11 +216,21 @@ a.cta-btn:active {
 .callout h3,
 .callout p { font-size: 16px; line-height: 26px; }
 .callout h3,
-.callout h4 { font-family: 'HelveticaNeue', 'Helvetica-Neue', Helvetica, sans-serif; font-weight: bold; margin: 4px 0; }
+.callout h4 {
+	font-family: 'HelveticaNeue', 'Helvetica-Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	margin: 4px 0;
+}
 .callout p { font-weight: 300; margin-bottom: 0; }
 .callout .callout-cta { text-align: center; float: right; width: 30%; }
 
-.end-page-content { height: 1px; margin-top: 0; margin-bottom: 0; padding: 0; border-bottom: 1px solid #dedede; }
+.end-page-content {
+	height: 1px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+	border-bottom: 1px solid #dedede;
+}
 .row.page-content + #footer #footer-wrap { border-top: 0; } /* prevent border/hr stacking on pg's w/o BTF */
 
 
@@ -240,8 +252,6 @@ a.cta-btn:active {
 #chief-officer .person-picture-wrap .name { margin-top: 50px; }
 
 
-
 /* Other shortcodes */
-.contact-info { }
 .contact-info a.contact-email { ext-decoration: underline; color: #666; }
 .contact-info a.contact-email:hover { color: #006C7F; }
