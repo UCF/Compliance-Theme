@@ -39,25 +39,26 @@ hr {
 
 /* Below the Fold */
 #below-the-fold-icon p { text-align: center; position: relative; margin-bottom: 0; }
-#below-the-fold-icon p img { padding-top: 24px; }
 #below-the-fold-icon,
-#below-the-fold-content,
-#below-the-fold-cta { padding: 20px 0; }
+#below-the-fold-content { margin-left:20px; padding: 15px 0; }
+#below-the-fold-cta { padding: 15px 0; }
 #below-the-fold-cta { background: #ffffff; }
 
 #below-the-fold-content h3,
 #home h3 { 
 	color: #333; 
-	font-size: 18px; 
-	line-height: 26px; 
-	font-weight: 400; 
-	margin-top: 0; 
+	font-size: 16px; 
+	line-height: 23px; 
+	font-weight: 500; 
+	margin-top: 10px; 
 	margin-bottom: 5px; 
 }
-#below-the-fold-content p { font-weight: 300; font-size: 16px; line-height: 23px; margin-bottom: 0; }
-#below-the-fold-cta { text-align: center; overflow: auto; }
-#below-the-fold-cta a.cta-btn { margin-top: 15px; margin-bottom: 15px; }
 
+#below-the-fold-content p { font-weight: 300; font-size: 14px; line-height: 25px; margin-bottom: 0; }
+#below-the-fold-cta { text-align: center; overflow: auto; }
+#below-the-fold-cta a.cta-btn { margin-top: 20px; margin-bottom: 10px; }
+#below-the-fold-cta p { font-weight: 200; font-size: 16px; line-height: 20px; margin-bottom: 5px; }
+#below-the-fold-cta a.phone { font-weight: 600; font-size: 20px; line-height: 21px; margin-bottom: 15px; }
 
 /* Footer */
 #footer { padding-bottom: 40px; padding-top: 0; }
@@ -85,9 +86,9 @@ hr {
 
 
 /* Home announcements */
-#announcements > * { padding-left: 20px; }
-#announcements h3 { margin-top: 10px; }
-#announcements ul li { margin-top: 8px; margin-bottom: 8px; line-height: 18px; }
+#announcements > * { padding-left: 18px; }
+#announcements h3 { margin-top: 10px; font-size:20px;}
+#announcements ul li {margin-top: 10px; margin-bottom: 10px; line-height: 18px;}
 
 
 /* Home features */

@@ -36,20 +36,24 @@ function get_below_the_fold($post_id=null) {
 	$blurb	 = apply_filters('the_content', $options['btf_blurb']);
 	$cta	 = $options['btf_cta'];
 	$link	 = $options['btf_link'];
+	$button  = $options['btf_button'];
+	$phone   = $options['btf_phone'];
 
 	if ((!$post_id) || (is_numeric($post_id) && get_post_meta($post_id, 'page_hide_btf', true) !== 'on')) {
 		ob_start();
 		?>
 		<div class="row" id="below-the-fold">
-			<div class="span4" id="below-the-fold-icon">
+			<div class="span3" id="below-the-fold-icon">
 				<p><a href="<?=do_shortcode($link);?>"><img src="<?=THEME_IMG_URL?>/below-the-fold.png" alt="<?=$title?>" title="<?=$title?>" /></a></p>
 			</div>
-			<div class="span5" id="below-the-fold-content">
+			<div class="span6" id="below-the-fold-content">
 				<h3><?=$title?></h3>
 				<?=$blurb?>
 			</div>
 			<div class="span3" id="below-the-fold-cta">
-				<a class="cta-btn" href="<?=do_shortcode($link);?>"><?=$cta?></a>
+				<a class="cta-btn" href="<?=$button;?>"><?=$cta?></a>
+				<p>or call:</p>
+				<p><a href="tele:<?=$phone?>" class="phone"><?=$phone?></a></p>
 			</div>
 		</div>
 		<?php

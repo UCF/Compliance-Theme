@@ -155,12 +155,26 @@ Config::$theme_settings = array(
 			'default'	  => 'Make a Report',
 		)),
 		new TextField(array(
-			'name'        => 'Below the Fold call to action button link',
+			'name'        => 'Below the Fold link to be used with the image',
 			'id'          => THEME_OPTIONS_NAME.'[btf_link]',
-			'description' => 'Link for the blue call to action button in the "below the fold" area.  Accepts a standard URL or the [page-url] shortcode.',
+			'description' => 'Link for the image in the "below the fold" area.  Accepts a standard URL or the [page-url] shortcode.',
 			'value'       => $theme_options['btf_link'],
 			'default'	  => '',
 		)),
+		new TextField(array(
+			'name'        => 'Below the Fold call to action button link',
+			'id'          => THEME_OPTIONS_NAME.'[btf_button]',
+			'description' => 'Link for the blue call to action button in the "below the fold" area.  Accepts a standard URL or the [page-url] shortcode.',
+			'value'       => $theme_options['btf_button'],
+			'default'	  => 'http://ucfintegrityline.com',
+		)),		
+		new TextField(array(
+			'name'        => 'Below the Fold phone number',
+			'id'          => THEME_OPTIONS_NAME.'[btf_phone]',
+			'description' => 'Telephone number for the call to action in the "below the fold" area.',
+			'value'       => $theme_options['btf_phone'],
+			'default'	  => '1-855-877-6049',
+		)),		
 	),
 	'Contact Information' => array(
 		new TextField(array(
