@@ -38,7 +38,7 @@ hr {
 
 
 /* Below the Fold */
-#below-the-fold-icon p { text-align: center; position: relative; margin-bottom: 0; }
+#below-the-fold-icon p { margin-bottom: 0; }
 #below-the-fold-icon,
 #below-the-fold-content { margin-left:20px; padding: 15px 0; }
 #below-the-fold-cta { padding: 15px 0; }
@@ -46,16 +46,19 @@ hr {
 
 #below-the-fold-content h3,
 #home h3 { 
-	color: #333; 
+	font-family: 'Helvetica', 'HelveticaNeue', 'Helvetica-Neue', sans-serif;
+	color: #111; 
 	font-size: 16px; 
 	line-height: 23px; 
-	font-weight: 500; 
-	margin-top: 10px; 
-	margin-bottom: 5px; 
+	font-weight: 300; 
+	margin-top: 30px; 
+	margin-bottom: 15px; 
 }
 
-#below-the-fold-content p { font-weight: 300; font-size: 14px; line-height: 25px; margin-bottom: 0; }
-#below-the-fold-cta { text-align: center; overflow: auto; }
+#below-the-fold-content p { font-family: 'Helvetica', 'HelveticaNeue', 'Helvetica-Neue', sans-serif; font-weight: 200; font-size: 14px; line-height: 25px; margin-bottom: 0; }
+#below-the-fold-content a { color: #50ACBE; text-decoration: underline;}
+#below-the-fold-content a:hover { color: #037285; }
+#below-the-fold-cta { overflow: auto; }
 #below-the-fold-cta a.cta-btn { margin-top: 20px; margin-bottom: 10px; }
 #below-the-fold-cta p { font-weight: 200; font-size: 16px; line-height: 20px; margin-bottom: 5px; }
 #below-the-fold-cta a.phone { font-weight: 600; font-size: 20px; line-height: 21px; margin-bottom: 15px; }

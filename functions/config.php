@@ -133,7 +133,7 @@ Config::$theme_settings = array(
 
 	),
 	'Below the Fold' => array(
-		new TextField(array(
+		new TextareaField(array(
 			'name'        => 'Below the Fold title',
 			'id'          => THEME_OPTIONS_NAME.'[btf_title]',
 			'description' => 'Header text for the "below the fold" area, displayed at the bottom of each page.',
@@ -148,33 +148,13 @@ Config::$theme_settings = array(
 			'default'	  => 'Input is essential to maintaining open communication regarding ethics and compliance at UCF. Be assured, your comments will be reviewed and handled as promptly and discreetly as possible.',
 		)),
 		new TextField(array(
-			'name'        => 'Below the Fold call to action button text',
-			'id'          => THEME_OPTIONS_NAME.'[btf_cta]',
-			'description' => 'Text that goes in the blue call to action button in the "below the fold" area.  This text should be brief but specific.',
-			'value'       => $theme_options['btf_cta'],
-			'default'	  => 'Make a Report',
-		)),
-		new TextField(array(
 			'name'        => 'Below the Fold link to be used with the image',
 			'id'          => THEME_OPTIONS_NAME.'[btf_link]',
 			'description' => 'Link for the image in the "below the fold" area.  Accepts a standard URL or the [page-url] shortcode.',
 			'value'       => $theme_options['btf_link'],
 			'default'	  => '',
 		)),
-		new TextField(array(
-			'name'        => 'Below the Fold call to action button link',
-			'id'          => THEME_OPTIONS_NAME.'[btf_button]',
-			'description' => 'Link for the blue call to action button in the "below the fold" area.  Accepts a standard URL or the [page-url] shortcode.',
-			'value'       => $theme_options['btf_button'],
-			'default'	  => 'http://ucfintegrityline.com',
-		)),		
-		new TextField(array(
-			'name'        => 'Below the Fold phone number',
-			'id'          => THEME_OPTIONS_NAME.'[btf_phone]',
-			'description' => 'Telephone number for the call to action in the "below the fold" area.',
-			'value'       => $theme_options['btf_phone'],
-			'default'	  => '1-855-877-6049',
-		)),		
+	
 	),
 	'Contact Information' => array(
 		new TextField(array(
