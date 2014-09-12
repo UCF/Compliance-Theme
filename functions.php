@@ -44,7 +44,7 @@ function get_below_the_fold($post_id=null) {
 		?>
 		<div class="row" id="below-the-fold">
 			<div class="span4" id="below-the-fold-icon">
-				<p><a href="<?=do_shortcode($link);?>"><img src="<?=THEME_IMG_URL?>/below-the-fold.png" alt="Speak up when you know of or suspect unethical behavior." title="<?=$title?>" /></a></p>
+				<p><a href="<?=do_shortcode($link);?>" onclick="_gaq.push(['_trackEvent','Compliance_Below_the_Fold_Event','Button_Click','Go_to_IntegrityLine_page'])"><img src="<?=THEME_IMG_URL?>/below-the-fold.png" alt="Speak up when you know of or suspect unethical behavior." title="<?=$title?>" /></a></p>
 			</div>
 			<div class="span8" id="below-the-fold-content">
 				<h3><?=$title?></h3>
