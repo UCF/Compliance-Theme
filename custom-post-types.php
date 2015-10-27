@@ -452,6 +452,23 @@ class Publication extends CustomPostType{
 }
 
 
+class Newsletter extends CustomPostType{
+	public 
+		$name           = 'newsletter',
+		$plural_name    = 'Newsletters',
+		$singular_name  = 'Newsletter',
+		$add_new_item   = 'Add New Newsletter',
+		$edit_item      = 'Edit Newsletter',
+		$new_item       = 'New Newsletter',
+		$public         = True,
+		$use_editor     = True,
+		$use_thumbnails = True,
+		$use_order      = True,
+		$use_title      = True,
+		$use_metabox    = False;
+}
+
+
 /**
  * Describes a staff member
  *

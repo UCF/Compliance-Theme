@@ -42,6 +42,10 @@
 				this.data         = data;
 			}
 		</script>
+
+		<!-- Typekit Embedded JS -->
+		<script src="https://use.typekit.net/hxx8fev.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 		
 	</head>
 	<body class="<?=body_classes()?> <?php if (is_home()) { ?>body-home<?php } ?>">
