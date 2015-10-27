@@ -85,6 +85,7 @@ Config::$custom_post_types = array(
 	'Video',
 	'Document',
 	'Publication',
+	'Newsletter',
 	'Person',
 	'Page',
 	'Post'
