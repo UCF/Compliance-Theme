@@ -53,10 +53,17 @@
 			<div class="container">
 
 				<!-- Variable to check if a Newsletter Post Page is Displaying -->
-				<?php wp_reset_postdata(); $page_id = get_the_ID(); $post_objects = get_field('post_objects', $page_id); ?>
+				<?php 
+					wp_reset_postdata(); 
+					$page_id = get_the_ID(); 
+					$post_objects = get_field('post_objects', $page_id); 
 
-				<?php if ( is_singular( 'newsletter' ) || $post_objects ): else: ?>
-				<div class="row">
+					$newsletter_header = '';
+
+					if ( is_singular( 'newsletter' ) || $post_objects ) { $newsletter_header = 'newsletter-header'; }
+				?>
+
+				<div class="<?php echo $newsletter_header; ?> row">
 					<div id="header" class="span12">
 						<h1><a href="<?=bloginfo('url')?>"><?=bloginfo('name')?></a></h1>
 					</div>
@@ -66,10 +73,9 @@
 					'container' => 'div',
 					'container_class' => 'row', 
 					'container_id' => 'header-menu-wrap',
-					'menu_class' => 'span12 menu '.get_header_styles(), 
+					'menu_class' => ''.$newsletter_header.' span12 menu '.get_header_styles(), 
 					'menu_id' => 'header-menu', 
 					'walker' => new Bootstrap_Walker_Nav_Menu()
 					));
 				?>
-
-				<?php endif; wp_reset_postdata(); ?>
+				<?php wp_reset_postdata(); ?>

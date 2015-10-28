@@ -291,6 +291,8 @@ a.cta-btn:active {
 #footer.newsletter-footer #footer-wrap #footer-widget-1,#footer.newsletter-footer #footer-wrap #footer-widget-2,#footer.newsletter-footer #footer-wrap #footer-widget-3{display:none;}
 #footer.newsletter-footer #footer-wrap #footer-widget-4.offset2 {margin-left:0;}
 #below-the-fold.newsletter-the-fold {font-family:"jaf-facitweb",sans-serif;padding: 15px 0 0 0;}	
-#below-the-fold.newsletter-the-fold h3 {font-size: 1.750em;font-weight: 700;}
+#below-the-fold.newsletter-the-fold h2 {font-size: 1.750em;font-weight: 700;}
 #below-the-fold.newsletter-the-fold p {font-size: 1.125em;}	
 #below-the-fold.newsletter-the-fold p a {font-weight: 700;}
+.body-home .newsletter-header {display: block;}
+.newsletter-header {display: none;}

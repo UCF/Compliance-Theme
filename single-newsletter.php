@@ -188,7 +188,5 @@
 		<?php dynamic_sidebar( 'newsletter-speak-up' ); ?>
 	</div>
 </div>
-		
-<!-- <?=get_below_the_fold();?> -->
 
-<?php get_footer();?>
+<?php get_footer(); ?>

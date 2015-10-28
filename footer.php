@@ -1,7 +1,15 @@
 				<!-- Variable to check if a Newsletter Post Page is Displaying -->
-				<?php wp_reset_postdata(); $page_id = get_the_ID(); $post_objects = get_field('post_objects', $page_id); ?>
+				<?php 
+					wp_reset_postdata(); 
+					$page_id = get_the_ID(); 
+					$post_objects = get_field('post_objects', $page_id); 
 
-				<div id="footer" class="<?php if ( is_singular( 'newsletter' ) || $post_objects ) { echo 'newsletter-footer'; } ?> row">
+					$newsletter_footer = '';
+
+					if ( is_singular( 'newsletter' ) || $post_objects ) { $newsletter_header = 'newsletter-footer'; }
+				?>
+
+				<div id="footer" class="<?php echo $newsletter_footer; ?> row">
 					<?php wp_reset_postdata(); ?>
 					<div class="span12" id="footer-wrap">
 						<div class="row">
