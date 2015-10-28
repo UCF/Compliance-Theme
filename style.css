@@ -290,7 +290,7 @@ a.cta-btn:active {
 #newsletter-secondary-container.span4{float:right;width:360px}
 .newsletter-footer #footer-widget-1,.newsletter-footer #footer-widget-2,.newsletter-footer #footer-widget-3{display:none;}
 .newsletter-footer #footer-widget-4.offset2 {margin-left:0;}
-#below-the-fold.newsletter-the-fold {padding: 15px 0 0 0;}	
+#below-the-fold.newsletter-the-fold {font-family:"jaf-facitweb",sans-serif;padding: 15px 0 0 0;}	
 #below-the-fold.newsletter-the-fold h3 {font-size: 1.750em;font-weight: 700;}
 #below-the-fold.newsletter-the-fold p {font-size: 1.125em;}	
 #below-the-fold.newsletter-the-fold p a {font-weight: 700;}

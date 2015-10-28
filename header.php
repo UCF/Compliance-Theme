@@ -53,9 +53,9 @@
 			<div class="container">
 			
 				<!-- Variable to check if a Newsletter Post Page is Displaying -->
-				<?php global $post; $page_id = $post->ID; $post_objects = get_field('post_objects', $page_id); ?>
+				<?php wp_reset_postdata(); $page_id = get_the_ID(); $post_objects = get_field('product_specs_table', $page_id); ?>
 				
-				<?php if ( !is_page_template( 'single-newsletter.php' ) || !$post_objects_title_check ): ?>
+				<?php if ( !is_singular( 'newsletter' ) || !$post_objects ): ?>
 				<div class="row">
 					<div id="header" class="span12">
 						<h1><a href="<?=bloginfo('url')?>"><?=bloginfo('name')?></a></h1>
@@ -72,4 +72,4 @@
 					));
 				?>
 				
-				<?php endif; ?>
+				<?php endif; wp_reset_postdata(); ?>
