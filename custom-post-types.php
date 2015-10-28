@@ -462,6 +462,7 @@ class Newsletter extends CustomPostType{
 		$new_item       = 'New Newsletter',
 		$public         = True,
 		$use_editor     = True,
+		$use_revisions  = True,
 		$use_thumbnails = True,
 		$use_order      = True,
 		$use_title      = True,

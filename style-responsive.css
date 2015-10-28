@@ -52,6 +52,7 @@
 	.message-title-row.row{margin:0 0 20px}
 	#newsletter-secondary-container h2{min-height:65px}
 	#newsletter-role-container a.read-more,.primary-article-container a.read-more{margin:10px 0 0}
+	#below-the-fold.newsletter-the-fold #below-the-fold-icon,#below-the-fold.newsletter-the-fold #below-the-fold-content {margin-left: 0;}
 }
 
 @media (max-width: 480px) {
