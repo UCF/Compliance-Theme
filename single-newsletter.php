@@ -1,5 +1,5 @@
 <?php disallow_direct_load('single-newsletter.php');?>
-<?php the_post();?>
+<?php get_header(); the_post();?>
 <div class="row page-content" id="newsletter">
 
 	<!-- Newsletter Header -->

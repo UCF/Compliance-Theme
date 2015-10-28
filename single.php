@@ -1,5 +1,5 @@
 <?php disallow_direct_load('single.php');?>
-<?php the_post();?>
+<?php get_header(); the_post();?>
 	<?php
 		$post_objects = get_field('post_objects');
 		if( $post_objects ): 
