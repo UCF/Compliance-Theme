@@ -15,7 +15,7 @@
 								setup_postdata( $post ); 
 								the_title();
 							endif;
-						?> | <a href="<?=bloginfo('url')?>/integrity-star-newsletter/previous-editions">See Previous Editions</a></p>
+						?> <span>|</span> <a href="<?=bloginfo('url')?>/integrity-star-newsletter/previous-editions">See Previous Editions</a></p>
 				</div>
 				<?php wp_reset_postdata(); ?>
 				<div id="newletter-logo-header">
