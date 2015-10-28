@@ -65,6 +65,7 @@
 						<?php the_field('custom_post_excerpt'); ?>
 						<a href="<?php the_permalink(); ?>" class="read-more">Read More <img src="<?php echo get_template_directory_uri(); ?>/static/img/arrow-right.png" alt="Read More" /></a>
 					</div>
+					<?php endif; ?>
 				<?php endif; ?>
 				<!-- End Message -->
 
@@ -86,6 +87,7 @@
 						<?php the_field('custom_post_excerpt'); ?>
 						<a href="<?php the_permalink(); ?>" class="read-more">Read More <img src="<?php echo get_template_directory_uri(); ?>/static/img/arrow-right.png" alt="Read More" /></a>
 					</div>
+					<?php endif; ?>
 				<?php endif; ?>
 				<!-- End Spotlight -->
 
@@ -107,6 +109,7 @@
 						<?php the_field('custom_post_excerpt'); ?>
 						<a href="<?php the_permalink(); ?>" class="read-more">Read More <img src="<?php echo get_template_directory_uri(); ?>/static/img/arrow-right.png" alt="Read More" /></a>
 					</div>
+					<?php endif; ?>
 				<?php endif; ?>
 				<!-- End Recognition -->
 
@@ -128,6 +131,7 @@
 						<?php the_field('custom_post_excerpt'); ?>
 						<a href="<?php the_permalink(); ?>" class="read-more">Read More <img src="<?php echo get_template_directory_uri(); ?>/static/img/arrow-right.png" alt="Read More" /></a>
 					</div>
+					<?php endif; ?>
 				<?php endif; ?>
 				<!-- End New Policies -->
 
@@ -149,6 +153,7 @@
 						<?php the_field('custom_post_excerpt'); ?>
 						<a href="<?php the_permalink(); ?>" class="read-more">Read More <img src="<?php echo get_template_directory_uri(); ?>/static/img/arrow-right.png" alt="Read More" /></a>
 					</div>
+					<?php endif; ?>
 				<?php endif; ?>
 				<!-- End FAQs -->
 
@@ -170,6 +175,7 @@
 						<?php the_field('custom_post_excerpt'); ?>
 						<a href="<?php the_permalink(); ?>" class="read-more">Read More <img src="<?php echo get_template_directory_uri(); ?>/static/img/arrow-right.png" alt="Read More" /></a>
 					</div>
+					<?php endif; ?>
 				<?php endif; ?>
 				<!-- End Next Edition -->
 
