@@ -51,11 +51,11 @@
 	<body class="<?=body_classes()?> <?php if (is_home()) { ?>body-home<?php } ?>">
 		<div class="bgwrap">
 			<div class="container">
-			
+
 				<!-- Variable to check if a Newsletter Post Page is Displaying -->
 				<?php wp_reset_postdata(); $page_id = get_the_ID(); $post_objects = get_field('post_objects', $page_id); ?>
-				
-				<?php if ( !is_singular( 'newsletter' ) || !$post_objects ): ?>
+
+				<?php if ( is_singular( 'newsletter' ) || $post_objects ): else: ?>
 				<div class="row">
 					<div id="header" class="span12">
 						<h1><a href="<?=bloginfo('url')?>"><?=bloginfo('name')?></a></h1>
@@ -71,5 +71,5 @@
 					'walker' => new Bootstrap_Walker_Nav_Menu()
 					));
 				?>
-				
+
 				<?php endif; wp_reset_postdata(); ?>
