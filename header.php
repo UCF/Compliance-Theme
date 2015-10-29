@@ -63,19 +63,22 @@
 					if ( is_singular( 'newsletter' ) || is_post_type_archive( 'newsletter' ) || $post_objects ) { $newsletter_header = 'newsletter-header'; }
 				?>
 
-				<div class="<?php echo $newsletter_header; ?> row">
-					<div id="header" class="span12">
-						<h1><a href="<?=bloginfo('url')?>"><?=bloginfo('name')?></a></h1>
+				<div class="<?php echo $newsletter_header; ?>">
+
+					<div class="<?php echo $newsletter_header; ?> row">
+						<div id="header" class="span12">
+							<h1><a href="<?=bloginfo('url')?>"><?=bloginfo('name')?></a></h1>
+						</div>
 					</div>
+					<?=wp_nav_menu(array(
+						'theme_location' => 'header-menu', 
+						'container' => 'div',
+						'container_class' => 'row', 
+						'container_id' => 'header-menu-wrap',
+						'menu_class' => ''.$newsletter_header.' span12 menu '.get_header_styles(), 
+						'menu_id' => 'header-menu', 
+						'walker' => new Bootstrap_Walker_Nav_Menu()
+						));
+					?>
 				</div>
-				<?=wp_nav_menu(array(
-					'theme_location' => 'header-menu', 
-					'container' => 'div',
-					'container_class' => 'row', 
-					'container_id' => 'header-menu-wrap',
-					'menu_class' => ''.$newsletter_header.' span12 menu '.get_header_styles(), 
-					'menu_id' => 'header-menu', 
-					'walker' => new Bootstrap_Walker_Nav_Menu()
-					));
-				?>
 				<?php wp_reset_postdata(); ?>
