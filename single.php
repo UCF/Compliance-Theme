@@ -5,7 +5,7 @@
 		if( $post_objects ): 
 	?>
 		<div class="row page-content" id="newsletter">
-			<div id="newsletter-header">
+			<div id="newsletter-header" class="single-newsletter-header">
 				<div id="newsletter-date-header">	
 					<p>
 						<?php
@@ -13,7 +13,9 @@
 							if( $post_objects_title_check ): 
 								$post = $post_objects_title_check;
 								setup_postdata( $post ); 
-								the_title();
+						?>
+								<a href="<?php the_permalink(); ?>" class="newsletter-parent-link"><?php the_title(); ?></a>
+						<?php
 							endif;
 						?> <span>|</span> <a href="<?php echo get_post_type_archive_link( 'newsletter' ); ?>">See Previous Editions</a></p>
 				</div>
