@@ -60,7 +60,7 @@
 
 					$newsletter_header = '';
 
-					if ( is_singular( 'newsletter' ) || $post_objects ) { $newsletter_header = 'newsletter-header'; }
+					if ( is_singular( 'newsletter' ) || is_post_type_archive( 'newsletter' ) || $post_objects ) { $newsletter_header = 'newsletter-header'; }
 				?>
 
 				<div class="<?php echo $newsletter_header; ?> row">

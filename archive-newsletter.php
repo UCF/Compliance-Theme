@@ -8,7 +8,7 @@
 		<div id="newletter-logo-header">
 							
 			<h1> 
-				<img src="img/integritystar-logo.png" alt="IntegrityStar UCF Compliance &amp; Ethics Newsletter" /> 
+				<img src="<?php echo get_template_directory_uri(); ?>/static/img/integritystar-logo.png" alt="IntegrityStar UCF Compliance &amp; Ethics Newsletter" /> 
 				<span>UCF Compliance &amp; Ethics Newsletter</span> 
 			</h1>
 
