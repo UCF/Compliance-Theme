@@ -5,7 +5,7 @@
 	<!-- Newsletter Header -->
 	<div id="newsletter-header">
 		<div id="newsletter-date-header">
-			<p><?php the_title(); ?> <span>|</span>  <a href="<?=bloginfo('url')?>/integrity-star-newsletter/previous-editions">See Previous Editions</a></p>
+			<p><?php the_title(); ?> <span>|</span>  <a href="<?php echo get_post_type_archive_link( 'newsletter' ); ?>">See Previous Editions</a></p>
 		</div>
 		<div id="newletter-logo-header">
 			<h1> 

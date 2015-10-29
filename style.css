@@ -297,3 +297,6 @@ a.cta-btn:active {
 #below-the-fold.newsletter-the-fold p a {font-weight: 700;}
 .body-home .newsletter-header {display: block;}
 .newsletter-header {display: none;}
+#newsletter-archive-container {padding:0 0 15px 0;}
+#newsletter-archive-container a {background-color: #50ACBE;text-transform: uppercase;text-align: center;color: #ffffff;height: 200px;margin: 5px;}
+#newsletter-archive-container a span {padding: 90px 15px 0 15px;font-weight: 700;display: block;}
