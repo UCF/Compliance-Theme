@@ -263,7 +263,7 @@ a.cta-btn:active {
 
 /* IntegrityStar Newsletter */
 #newsletter{font-family:"jaf-facitweb",sans-serif;font-style:normal;font-weight:400;font-size:18px;}
-#newsletter p{line-height:1.4em;padding:0 0 10px;}
+#newsletter p,#newsletter li{line-height:1.4em;padding:0 0 10px;}
 #newsletter-header{border-bottom:1px #cecece solid;padding:25px 0;}
 #newsletter-header p span{font-weight: 400;}
 .single-newsletter-header #newsletter-date-header .newsletter-parent-link,.single-newsletter-header #newsletter-date-header .newsletter-parent-link:hover,.single-newsletter-header #newsletter-date-header .newsletter-parent-link:focus{color:#000000;}
