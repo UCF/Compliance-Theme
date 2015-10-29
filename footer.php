@@ -6,7 +6,7 @@
 
 					$newsletter_footer = '';
 
-					if ( is_singular( 'newsletter' ) || is_post_type_archive( 'newsletter' ) || $post_objects ) { $newsletter_header = 'newsletter-footer'; }
+					if ( is_singular( 'newsletter' ) || is_post_type_archive( 'newsletter' ) || $post_objects ) { $newsletter_footer = 'newsletter-footer'; }
 				?>
 
 				<div id="footer" class="<?php echo $newsletter_footer; ?> row">

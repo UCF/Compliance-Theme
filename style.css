@@ -291,6 +291,8 @@ a.cta-btn:active {
 #newsletter-secondary-container.span4{float:right;width:360px;}
 #footer.newsletter-footer #footer-wrap #footer-widget-1,#footer.newsletter-footer #footer-wrap #footer-widget-2,#footer.newsletter-footer #footer-wrap #footer-widget-3{display:none;}
 #footer.newsletter-footer #footer-wrap #footer-widget-4.offset2 {margin-left:0;}
+.body-home #footer.newsletter-footer #footer-wrap #footer-widget-1,.body-home #footer.newsletter-footer #footer-wrap #footer-widget-2,.body-home #footer.newsletter-footer #footer-wrap #footer-widget-3{display:block;}
+.body-home #footer.newsletter-footer #footer-wrap #footer-widget-4.offset2 {margin-left:180px;}
 #below-the-fold.newsletter-the-fold {font-family:"jaf-facitweb",sans-serif;padding: 15px 0 0 0;}	
 #below-the-fold.newsletter-the-fold h2 {font-size: 1.750em;font-weight: 700;}
 #below-the-fold.newsletter-the-fold p {font-size: 1.125em;}	
