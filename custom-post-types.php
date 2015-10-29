@@ -22,6 +22,7 @@ abstract class CustomPostType{
 		$use_shortcode  = False, # Auto generate a shortcode for the post type
 		                         # (see also objectsToHTML and toHTML methods)
 		$taxonomies     = array('post_tag'),
+		$has_archive    = False,
 		$built_in       = False,
 
 		# Optional default ordering for generic shortcode if not specified by user.
@@ -174,6 +175,7 @@ abstract class CustomPostType{
 			'supports'   => $this->supports(),
 			'public'     => $this->options('public'),
 			'taxonomies' => $this->options('taxonomies'),
+			'has_archive' => $this->options('has_archive'),
 			'_builtin'   => $this->options('built_in')
 		);
 		
@@ -466,6 +468,7 @@ class Newsletter extends CustomPostType{
 		$use_thumbnails = True,
 		$use_order      = True,
 		$use_title      = True,
+		$has_archive    = True,
 		$use_metabox    = False;
 }
 
