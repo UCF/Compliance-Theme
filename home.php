@@ -1,14 +1,16 @@
 <?php disallow_direct_load('home.php');?>
 <?php get_header(); ?>
 <?php
-	$options 		= get_option(THEME_OPTIONS_NAME);
-	$home_content 	= apply_filters('the_content', $options['home_content']);
-	$news_stories   = get_posts(array(
-						'numberposts' => 3,
-						'orderby'     => 'date',
-						'order'       => 'DESC',
-						'post_type'   => 'post',
-						'exclude'   => 'newsletter'
+	$newsletter_id_object = get_category_by_slug('newsletter');
+	$newsletter_id        = $newsletter_id_object->term_id;
+	$options 		      = get_option(THEME_OPTIONS_NAME);
+	$home_content 	      = apply_filters('the_content', $options['home_content']);
+	$news_stories         = get_posts(array(
+						'numberposts'        => 3,
+						'orderby'            => 'date',
+						'order'              => 'DESC',
+						'post_type'          => 'post',
+						'category__not_in'   => $newsletter_id
 						)
 					);
 ?>
