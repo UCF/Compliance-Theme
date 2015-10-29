@@ -7,7 +7,8 @@
 						'numberposts' => 3,
 						'orderby'     => 'date',
 						'order'       => 'DESC',
-						'post_type'   => 'post'
+						'post_type'   => 'post',
+						'exclude'   => 'newsletter'
 						)
 					);
 ?>
