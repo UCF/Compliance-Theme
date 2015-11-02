@@ -50,6 +50,7 @@
 				<?php wp_reset_postdata(); ?>
 
 				<!-- Start Message -->
+				<?php $message_from = get_field('message_from_name'); ?>
 				<?php if ( get_field('message_post') != NULL ): ?>
 					<?php 
 						$message_post_object = get_field('message_post');
@@ -59,7 +60,7 @@
 					?>
 					<div id="message-post-container" class="secondary-article-container">
 						<div class="message-title-row row">		
-							<h2><span>A message from</span>Rhonda L. Bishop</h2>
+							<h2><span>A message from</span><?php echo $message_from; ?></h2>
 							<?php the_post_thumbnail('medium'); ?>
 						</div>		
 						<?php the_field('custom_post_excerpt'); ?>
@@ -72,6 +73,7 @@
 				<?php wp_reset_postdata(); ?>
 
 				<!-- Start Spotlight -->
+				<?php $spotlight_header = get_field('spotlight_header'); ?>
 				<?php if ( get_field('spotlight_post') != NULL ): ?>
 					<?php 
 						$spotlight_post_object = get_field('spotlight_post');
@@ -82,7 +84,7 @@
 					<div class="secondary-post-container">			
 						<h2>
 							<img src="<?php echo get_template_directory_uri(); ?>/static/img/in-the-spotlight.png" alt="In the Spotlight" />
-							In the Spotlight
+							<?php echo $spotlight_header; ?>
 						</h2>
 						<?php the_field('custom_post_excerpt'); ?>
 						<a href="<?php the_permalink(); ?>" class="read-more">Read More <img src="<?php echo get_template_directory_uri(); ?>/static/img/arrow-right.png" alt="Read More" /></a>
@@ -94,6 +96,7 @@
 				<?php wp_reset_postdata(); ?>
 
 				<!-- Start Recognition -->
+				<?php $recognition_header = get_field('recognition_header'); ?>
 				<?php if ( get_field('recognition_post') != NULL ): ?>
 					<?php 
 						$recognition_post_object = get_field('recognition_post');
@@ -104,7 +107,7 @@
 					<div class="secondary-post-container">
 						<h2>
 							<img src="<?php echo get_template_directory_uri(); ?>/static/img/recognition.png" alt="Recognition" />
-							Recognition
+							<?php echo $recognition_header; ?>
 						</h2>
 						<?php the_field('custom_post_excerpt'); ?>
 						<a href="<?php the_permalink(); ?>" class="read-more">Read More <img src="<?php echo get_template_directory_uri(); ?>/static/img/arrow-right.png" alt="Read More" /></a>
@@ -116,6 +119,7 @@
 				<?php wp_reset_postdata(); ?>
 
 				<!-- Start New Policies -->
+				<?php $new_policies_header = get_field('new_policies_header'); ?>
 				<?php if ( get_field('new_policies_post') != NULL ): ?>
 					<?php 
 						$new_policies_post_object = get_field('new_policies_post');
@@ -126,7 +130,7 @@
 					<div class="secondary-post-container">		
 						<h2>
 							<img src="<?php echo get_template_directory_uri(); ?>/static/img/new-policies.png" alt="New Policies" />
-							New Policies
+							<?php echo $new_policies_header; ?>
 						</h2>
 						<?php the_field('custom_post_excerpt'); ?>
 						<a href="<?php the_permalink(); ?>" class="read-more">Read More <img src="<?php echo get_template_directory_uri(); ?>/static/img/arrow-right.png" alt="Read More" /></a>
@@ -138,6 +142,7 @@
 				<?php wp_reset_postdata(); ?>
 
 				<!-- Start FAQs -->
+				<?php $faqs_header = get_field('faqs_header'); ?>
 				<?php if ( get_field('faqs_post') != NULL ): ?>
 					<?php 
 						$faqs_post_object = get_field('faqs_post');
@@ -148,7 +153,7 @@
 					<div class="secondary-post-container">			
 						<h2>
 							<img src="<?php echo get_template_directory_uri(); ?>/static/img/faqs.png" alt="FAQs" />
-							FAQs
+							<?php echo $faqs_header; ?>
 						</h2>
 						<?php the_field('custom_post_excerpt'); ?>
 						<a href="<?php the_permalink(); ?>" class="read-more">Read More <img src="<?php echo get_template_directory_uri(); ?>/static/img/arrow-right.png" alt="Read More" /></a>
@@ -160,6 +165,7 @@
 				<?php wp_reset_postdata(); ?>
 
 				<!-- Start Next Edition -->
+				<?php $in_our_next_edition_header = get_field('in_our_next_edition_header'); ?>
 				<?php if ( get_field('next_edition_post') != NULL ): ?>
 					<?php 
 						$next_edition_post_object = get_field('next_edition_post');
@@ -170,7 +176,7 @@
 					<div class="secondary-post-container">			
 						<h2>
 							<img src="<?php echo get_template_directory_uri(); ?>/static/img/in-our-next-edition.png" alt="In Our Next Edition" />
-							In Our Next Edition
+							<?php echo $in_our_next_edition_header; ?>
 						</h2>
 						<?php the_field('custom_post_excerpt'); ?>
 						<a href="<?php the_permalink(); ?>" class="read-more">Read More <img src="<?php echo get_template_directory_uri(); ?>/static/img/arrow-right.png" alt="Read More" /></a>
