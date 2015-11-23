@@ -1,11 +1,37 @@
 <?php disallow_direct_load('single-newsletter.php');?>
 <?php get_header(); the_post();?>
+
+	<?php wp_reset_query(); ?>
+
+	<?php
+		$counter = 0;
+		$args = array( 'post_type' => 'case_studies', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => 1);
+		$lastposts = get_posts( $args );
+		foreach($lastposts as $row) : 
+			$counter++;
+		endforeach; 
+	?>
+
+	<?php wp_reset_query(); ?>
+
 <div class="row page-content" id="newsletter">
 
 	<!-- Newsletter Header -->
 	<div id="newsletter-header">
 		<div id="newsletter-date-header">
-			<p><?php the_title(); ?> <span>|</span>  <a href="<?php echo get_post_type_archive_link( 'newsletter' ); ?>">See Previous Editions</a></p>
+			<p><?php the_title(); ?> 
+
+				<?php
+							if ( $counter > 1 ):
+						?>
+
+							<span>|</span> <a href="<?php echo get_post_type_archive_link( 'newsletter' ); ?>">See Previous Editions</a>
+
+						<?php
+							endif;
+						?> 
+
+			</p>
 		</div>
 		<div id="newletter-logo-header">
 			<h1> 

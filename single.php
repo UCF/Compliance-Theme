@@ -1,9 +1,24 @@
 <?php disallow_direct_load('single.php');?>
 <?php get_header(); the_post();?>
+
+	<?php wp_reset_query(); ?>
+
+	<?php
+		$counter = 0;
+		$args = array( 'post_type' => 'case_studies', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => 1);
+		$lastposts = get_posts( $args );
+		foreach($lastposts as $row) : 
+			$counter++;
+		endforeach; 
+	?>
+
+	<?php wp_reset_query(); ?>
+
 	<?php
 		$post_objects = get_field('post_objects');
 		if( $post_objects ): 
 	?>
+
 		<div class="row page-content" id="newsletter">
 			<div id="newsletter-header" class="single-newsletter-header">
 				<div id="newsletter-date-header">	
@@ -17,7 +32,20 @@
 								<a href="<?php the_permalink(); ?>" class="newsletter-parent-link"><?php the_title(); ?></a>
 						<?php
 							endif;
-						?> <span>|</span> <a href="<?php echo get_post_type_archive_link( 'newsletter' ); ?>">See Previous Editions</a></p>
+						?> 
+
+						<?php
+							if ( $counter > 1 ):
+						?>
+
+							<span>|</span> <a href="<?php echo get_post_type_archive_link( 'newsletter' ); ?>">See Previous Editions</a>
+
+						<?php
+							endif;
+						?> 
+
+					</p>
+
 				</div>
 				<?php wp_reset_postdata(); ?>
 				<div id="newletter-logo-header">
