@@ -5,7 +5,7 @@
 
 	<?php
 		$counter = 0;
-		$args = array( 'post_type' => 'case_studies', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => -1);
+		$args = array( 'post_type' => 'newsletter', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => -1);
 		$lastposts = get_posts( $args );
 		foreach($lastposts as $row) : 
 			$counter++;
