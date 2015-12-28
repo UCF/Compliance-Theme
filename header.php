@@ -67,10 +67,10 @@
 
 					<div class="<?php echo $newsletter_header; ?> row">
 						<div id="header" class="span12">
-							<h1><a href="<?=bloginfo('url')?>"><?=bloginfo('name')?></a></h1>
+							<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
 						</div>
 					</div>
-					<?=wp_nav_menu(array(
+					<?php wp_nav_menu(array(
 						'theme_location' => 'header-menu', 
 						'container' => 'div',
 						'container_class' => 'row', 

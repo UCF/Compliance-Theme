@@ -7,9 +7,9 @@
 		$counter = 0;
 		$args = array( 'post_type' => 'newsletter', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => -1);
 		$lastposts = get_posts( $args );
-		foreach($lastposts as $row) : 
+		foreach($lastposts as $row) {
 			$counter++;
-		endforeach; 
+		}
 	?>
 
 	<?php wp_reset_query(); ?>

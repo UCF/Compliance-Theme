@@ -24,7 +24,7 @@
 				<div id="newsletter-date-header">	
 					<p>
 						<?php
-							$post_objects_title_check = get_field('post_objects');
+							$post_objects_title_check = get_field( 'post_objects' );
 							if( $post_objects_title_check ): 
 								$post = $post_objects_title_check;
 								setup_postdata( $post ); 
@@ -76,7 +76,7 @@
 
 		<?php wp_reset_postdata(); ?>
 
-		<div class="row page-content" id="<?=$post->post_name?>">
+		<div class="row page-content" id="<?php $post->post_name; ?>">
 			<div class="span12">
 				<header>
 					<h1><?php the_title();?></h1>
