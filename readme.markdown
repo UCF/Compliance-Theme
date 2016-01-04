@@ -3,7 +3,7 @@ Theme written off of Generic Theme for the University Compliance, Ethics, and Ri
 
 
 ## Required Plugins
-* n/a
+*This theme requires the Advanced Custom Fields plugin.
 
 ## Installation Requirements
 * n/a
@@ -30,7 +30,6 @@ This theme relies on Twitter's Bootstrap framework. UCF's fork of the Bootstrap 
 ## Notes
 * This theme uses a static home page template instead of the content of a page titled 'Home'.  In the WordPress Settings > Reading settings, 'Front Page displays' should be set to 'Your latest posts' and NOT a static page.  Home page elements can be customized from the Theme Options admin area.
 * More information on this theme's framework, registered post types, taxonomies, and shortcodes can be viewed in the [Generic Theme's readme](https://github.com/UCF/Wordpress-Generic-Theme/blob/master/readme.markdown).
-*This theme requires the Advanced Custom Fields plugin.
 
 
 ## Shortcodes
