@@ -57,7 +57,7 @@
 			</div>
 			<div id="newsletter-article-container">
 				<div class="primary-article-container">					
-					<h2><?php the_title(); ?></h2>
+					<h2><?php the_field('custom_post_display_title'); ?></h2>
 					<?php the_content(); ?>
 				</div>
 			</div>

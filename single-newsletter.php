@@ -56,7 +56,7 @@
 							setup_postdata( $post ); 
 				?>
 					<div class="primary-article-container">		
-						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<h2><a href="<?php the_permalink(); ?>"><?php the_field('custom_post_display_title'); ?></a></h2>
 						<?php the_field('custom_post_excerpt'); ?>
 						<a href="<?php the_permalink(); ?>" class="read-more">Read More <img src="<?php echo get_template_directory_uri(); ?>/static/img/arrow-right.png" alt="Read More" /></a>
 					</div>
