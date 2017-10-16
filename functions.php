@@ -39,7 +39,7 @@ function get_below_the_fold($post_id=null) {
 	$button  = $options['btf_button'];
 	$phone   = $options['btf_phone'];
 	$ucfcclink	 = $options['ucfcc_link'];
-	$ucfcccta	 = apply_filters('the_content', $options['ucfcc_cta']);
+	$ucfcccta	 = wptexturize($options['ucfcc_cta']);
 
 	if ((!$post_id) || (is_numeric($post_id) && get_post_meta($post_id, 'page_hide_btf', true) !== 'on')) {
 		ob_start();
