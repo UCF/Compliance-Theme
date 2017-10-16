@@ -39,7 +39,7 @@ function get_below_the_fold($post_id=null) {
 	$button  = $options['btf_button'];
 	$phone   = $options['btf_phone'];
 	$ucfcclink	 = $options['ucfcc_link'];
-	$ucfcccta	 = $options['ucfcc_cta'];
+	$ucfcccta	 = apply_filters('the_content', $options['ucfcc_cta']);
 
 	if ((!$post_id) || (is_numeric($post_id) && get_post_meta($post_id, 'page_hide_btf', true) !== 'on')) {
 		ob_start();
@@ -53,8 +53,10 @@ function get_below_the_fold($post_id=null) {
 				<?=$blurb?>
 			</div>
 			<div class="span4" id="code-of-conduct">
-				<p class="span6"><a href="<?=do_shortcode($ucfcclink);?>" target="_blank"><img src="<?=THEME_IMG_URL?>/UCF-CodeOfConduct.jpg" alt="<?=$ucfcccta?>" title="<?=$ucfcccta?>" /></a></p>
-				<p class="span6"><a href="<?=do_shortcode($ucfcclink);?>" target="_blank"><?=$ucfcccta?></a></p>
+				<div class="row-fluid">
+					<p class="span6"><a href="<?=do_shortcode($ucfcclink);?>" target="_blank"><img src="<?=THEME_IMG_URL?>/UCF-CodeOfConduct.jpg" alt="<?=$ucfcccta?>" title="<?=$ucfcccta?>" /></a></p>
+					<p class="span6"><a href="<?=do_shortcode($ucfcclink);?>" target="_blank"><?=$ucfcccta?></a></p>
+				</div>
 			</div>
 		</div>
 		<?php
