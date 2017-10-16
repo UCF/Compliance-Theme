@@ -54,8 +54,11 @@ function get_below_the_fold($post_id=null) {
 			</div>
 			<div class="span4" id="code-of-conduct">
 				<div class="row-fluid">
-					<p class="span6"><a href="<?=do_shortcode($ucfcclink);?>" target="_blank"><img src="<?=THEME_IMG_URL?>/UCF-CodeOfConduct.jpg" alt="<?=$ucfcccta?>" title="<?=$ucfcccta?>" /></a></p>
-					<p class="span6"><a href="<?=do_shortcode($ucfcclink);?>" target="_blank"><?=$ucfcccta?></a></p>
+					<p class="span5"><a href="<?=do_shortcode($ucfcclink);?>" target="_blank"><img src="<?=THEME_IMG_URL?>/UCF-CodeOfConduct.jpg" alt="<?=$ucfcccta?>" title="<?=$ucfcccta?>" /></a></p>
+					<p class="span7" id="code-of-conduct-content">
+						<h3><?=$ucfcccta?></h3>
+						<a href="<?=do_shortcode($ucfcclink);?>" class="btn" target="_blank">View PDF</a>
+					</p>
 				</div>
 			</div>
 		</div>
