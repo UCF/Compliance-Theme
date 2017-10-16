@@ -63,6 +63,10 @@ hr {
 #below-the-fold-cta p { font-weight: 200; font-size: 16px; line-height: 20px; margin-bottom: 5px; }
 #below-the-fold-cta a.phone { font-weight: 600; font-size: 20px; line-height: 21px; margin-bottom: 15px; }
 
+/* Code of Conduct */
+#code-of-conduct { margin-left:20px; padding: 15px 0; }
+#code-of-conduct p { font-family: 'Helvetica', 'HelveticaNeue', 'Helvetica-Neue', sans-serif; font-weight: bold; font-size: 14px; line-height: 25px; margin-bottom: 0; }
+
 /* Footer */
 #footer { padding-bottom: 40px; padding-top: 0; }
 #footer #footer-wrap { border-top: 1px solid #dedede; }
