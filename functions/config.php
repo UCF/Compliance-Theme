@@ -176,6 +176,13 @@ Config::$theme_settings = array(
 			'value'       => $theme_options['ucfcc_cta'],
 			'default'	  => 'View UCF Employee Code of Conduct',
 		)),
+		new TextField(array(
+			'name'        => 'UCF Employee Code of Conduct Button Text',
+			'id'          => THEME_OPTIONS_NAME.'[ucfcc_btn]',
+			'description' => 'UCF Employee Code of Conduct Button Text',
+			'value'       => $theme_options['ucfcc_btn'],
+			'default'	  => 'View PDF',
+		)),
 	
 	),
 	'Contact Information' => array(
