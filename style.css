@@ -67,7 +67,7 @@ hr {
 /* Code of Conduct */
 #code-of-conduct { margin-left:20px; padding: 15px 0; }
 #code-of-conduct-content h3 { margin-left: 10px; }
-#code-of-conduct p { font-family: 'Helvetica', 'HelveticaNeue', 'Helvetica-Neue', sans-serif; font-weight: bold; font-size: 14px; line-height: 25px; margin-bottom: 0; }
+#code-of-conduct p { font-family: 'Helvetica', 'HelveticaNeue', 'Helvetica-Neue', sans-serif; font-weight: bold; font-size: 14px; line-height: 20px; margin-bottom: 0; }
 #code-of-conduct div a.btn { background-image: none; background: #000000; color: #ffc904; text-shadow: none; margin: 0 0 0 10px; display: inline-block; text-transform: uppercase; font-weight: 700; }
 
 /* Footer */
