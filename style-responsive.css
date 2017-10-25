@@ -12,6 +12,7 @@
 	#announcements > * { padding-left: 15px; }
 
 	#below-the-fold-icon { padding-top: 22px; }
+	#below-the-fold-content { padding: 20px 0; }
 
 	/* IntegrityStar Newsletter */
 	#newsletter-date-header{text-align:left;}
@@ -34,12 +35,16 @@
 		min-height: 0;
 	}
 
-	#below-the-fold-icon { padding-bottom: 0; padding-top: 0; }
+	#below-the-fold-icon { padding-bottom: 0; padding-top: 20px; }
+	#below-the-fold-icon img { max-width: 350px; width: 100%; }
+	#below-the-fold-content h3 { margin-top: 0; margin-bottom: 0; }
 	#below-the-fold-cta a.phone { padding-bottom: 10px;}
+	#below-the-fold-content { padding-right: 20px; }
 
-	#code-of-conduct div img { max-width: 330px; }
-	#code-of-conduct div a { display: inline-block; margin: 30px auto 0 auto; }
-	#code-of-conduct div a.btn { margin: 0 0 15px 10px; }
+	#code-of-conduct div img { max-width: 250px; }
+	#code-of-conduct-content h3 { margin-top: 20px; }
+	#code-of-conduct div a { display: inline-block; margin: 0 auto; }
+	#code-of-conduct div a.btn { margin: 0 0 20px 0; }
 	
 	#footer #footer-widget-4 { margin-top: 20px; }
 	
