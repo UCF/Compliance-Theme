@@ -162,6 +162,27 @@ Config::$theme_settings = array(
 			'value'       => $theme_options['btf_link'],
 			'default'	  => '',
 		)),
+		new TextField(array(
+			'name'        => 'UCF Employee Code of Conduct link to be used with the image',
+			'id'          => THEME_OPTIONS_NAME.'[ucfcc_link]',
+			'description' => 'Link for the image in the UCF Employee Code of Conduct area below the fold.  Accepts a standard URL.',
+			'value'       => $theme_options['ucfcc_link'],
+			'default'	  => '',
+		)),
+		new TextField(array(
+			'name'        => 'UCF Employee Code of Conduct Call to Action',
+			'id'          => THEME_OPTIONS_NAME.'[ucfcc_cta]',
+			'description' => 'Call to Action for UCF Employee Code of Conduct area below the fold.',
+			'value'       => $theme_options['ucfcc_cta'],
+			'default'	  => 'View UCF Employee Code of Conduct',
+		)),
+		new TextField(array(
+			'name'        => 'UCF Employee Code of Conduct Button Text',
+			'id'          => THEME_OPTIONS_NAME.'[ucfcc_btn]',
+			'description' => 'UCF Employee Code of Conduct Button Text',
+			'value'       => $theme_options['ucfcc_btn'],
+			'default'	  => 'View PDF',
+		)),
 	
 	),
 	'Contact Information' => array(

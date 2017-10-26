@@ -40,12 +40,21 @@ hr {
 /* Below the Fold */
 #below-the-fold-icon p { margin-bottom: 0; }
 #below-the-fold-icon,
-#below-the-fold-content { margin-left:20px; padding: 15px 0; }
+#below-the-fold-content { margin-left:20px; padding: 50px 0 30px 0; }
 #below-the-fold-cta { padding: 15px 0; }
 #below-the-fold-cta { background: #ffffff; }
 
-#below-the-fold-content h3,
-#home h3 {
+#below-the-fold-content h3 { 
+	font-family: 'Helvetica', 'HelveticaNeue', 'Helvetica-Neue', sans-serif;
+	color: #111; 
+	font-size: 16px; 
+	line-height: 21px; 
+	font-weight: 300; 
+	margin-top: 0; 
+	margin-bottom: 0; 
+}
+
+#home h3 { 
 	font-family: 'Helvetica', 'HelveticaNeue', 'Helvetica-Neue', sans-serif;
 	color: #111;
 	font-size: 16px;
@@ -55,13 +64,34 @@ hr {
 	margin-bottom: 15px;
 }
 
+#code-of-conduct h3 { 
+	font-family: 'Helvetica', 'HelveticaNeue', 'Helvetica-Neue', sans-serif;
+	color: #111; 
+	font-size: 16px; 
+	line-height: 23px; 
+	font-weight: 300; 
+	margin-top: 30px; 
+	margin-bottom: 15px; 
+}
+#code-of-conduct h3 p { font-size: 20px; }
+
+#below-the-fold-icon img { max-width: 200px; width: 100%; }
 #below-the-fold-content p { font-family: 'Helvetica', 'HelveticaNeue', 'Helvetica-Neue', sans-serif; font-weight: 200; font-size: 14px; line-height: 25px; margin-bottom: 0; }
-#below-the-fold-content a { color: #50ACBE; text-decoration: underline;}
+#below-the-fold-content a { color: #50ACBE; text-decoration: underline; font-size: 16px; font-weight: 700; }
 #below-the-fold-content a:hover { color: #037285; }
 #below-the-fold-cta { overflow: auto; }
 #below-the-fold-cta a.cta-btn { margin-top: 20px; margin-bottom: 10px; }
 #below-the-fold-cta p { font-weight: 200; font-size: 16px; line-height: 20px; margin-bottom: 5px; }
 #below-the-fold-cta a.phone { font-weight: 600; font-size: 20px; line-height: 21px; margin-bottom: 15px; }
+
+/* Code of Conduct */
+#code-of-conduct { margin-left:20px; padding: 5px 0; }
+#code-of-conduct-content h3 { margin-left: 0; margin-bottom: 15px; margin-top: 40px; }
+#code-of-conduct-content h3 p { line-height: 25px; }
+#code-of-conduct p { font-family: 'Helvetica', 'HelveticaNeue', 'Helvetica-Neue', sans-serif; font-weight: bold; font-size: 14px; line-height: 20px; margin-bottom: 0; }
+#code-of-conduct div a.btn { background-image: none; background: #000000; color: #ffffff; text-shadow: none; margin: 0; display: inline-block; font-weight: 700; padding: 12px 15px 11px 17px; }
+#code-of-conduct div a.btn, #code-of-conduct div a.btn p { font-size: 15px; }
+#code-of-conduct img { max-width: 150px; width: 100%; }
 
 /* Footer */
 #footer { padding-bottom: 40px; padding-top: 0; }
