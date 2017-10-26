@@ -2,7 +2,7 @@
 Theme Name: UCF Compliance, Ethics, and Risk Office Theme
 Author: UCF Web Communications
 Github Theme URI: https://github.com/UCF/Compliance-Theme
-Version: v1.1.3
+Version: v1.1.4
 */
 
 /* Universal */
@@ -44,17 +44,17 @@ hr {
 #below-the-fold-cta { padding: 15px 0; }
 #below-the-fold-cta { background: #ffffff; }
 
-#below-the-fold-content h3 { 
+#below-the-fold-content h3 {
 	font-family: 'Helvetica', 'HelveticaNeue', 'Helvetica-Neue', sans-serif;
-	color: #111; 
-	font-size: 16px; 
-	line-height: 21px; 
-	font-weight: 300; 
-	margin-top: 0; 
-	margin-bottom: 0; 
+	color: #111;
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: 300;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
-#home h3 { 
+#home h3 {
 	font-family: 'Helvetica', 'HelveticaNeue', 'Helvetica-Neue', sans-serif;
 	color: #111;
 	font-size: 16px;
@@ -64,14 +64,14 @@ hr {
 	margin-bottom: 15px;
 }
 
-#code-of-conduct h3 { 
+#code-of-conduct h3 {
 	font-family: 'Helvetica', 'HelveticaNeue', 'Helvetica-Neue', sans-serif;
-	color: #111; 
-	font-size: 16px; 
-	line-height: 23px; 
-	font-weight: 300; 
-	margin-top: 30px; 
-	margin-bottom: 15px; 
+	color: #111;
+	font-size: 16px;
+	line-height: 23px;
+	font-weight: 300;
+	margin-top: 30px;
+	margin-bottom: 15px;
 }
 #code-of-conduct h3 p { font-size: 20px; }
 
