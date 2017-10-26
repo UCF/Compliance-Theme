@@ -39,24 +39,28 @@ function get_below_the_fold($post_id=null) {
 	$button  = $options['btf_button'];
 	$phone   = $options['btf_phone'];
 	$ucfcclink	 = $options['ucfcc_link'];
-	$ucfcccta	 = wptexturize($options['ucfcc_cta']);
+	$ucfcccta	 = apply_filters('the_content', $options['ucfcc_cta']);
+	$ucfccbtn	 = apply_filters('the_content', $options['ucfcc_btn']);
 
 	if ((!$post_id) || (is_numeric($post_id) && get_post_meta($post_id, 'page_hide_btf', true) !== 'on')) {
 		ob_start();
 		?>
 		<div class="row" id="below-the-fold">
-			<div class="span4" id="below-the-fold-icon">
+			<div class="span6" id="code-of-conduct">
+				<div class="row-fluid">
+					<div class="span4"><a href="<?=do_shortcode($ucfcclink);?>" target="_blank"><img src="<?=THEME_IMG_URL?>/UCF-CodeOfConduct.jpg" alt="<?=$ucfcccta?>" title="<?=$ucfcccta?>" /></a></div>
+					<div class="span8" id="code-of-conduct-content">
+						<h3><?=$ucfcccta?></h3>
+						<a href="<?=do_shortcode($ucfcclink);?>" class="btn" target="_blank"><?=$ucfccbtn?></a>
+					</div>
+				</div>
+			</div>
+			<div class="span3" id="below-the-fold-icon">
 				<p><a href="<?=do_shortcode($link);?>"><img src="<?=THEME_IMG_URL?>/below-the-fold.png" alt="Speak up when you know of or suspect unethical behavior." title="<?=$title?>" /></a></p>
 			</div>
-			<div class="span4" id="below-the-fold-content">
+			<div class="span3" id="below-the-fold-content">
 				<h3><?=$title?></h3>
 				<?=$blurb?>
-			</div>
-			<div class="span4" id="code-of-conduct">
-				<div class="row-fluid">
-					<p class="span6"><a href="<?=do_shortcode($ucfcclink);?>" target="_blank"><img src="<?=THEME_IMG_URL?>/UCF-CodeOfConduct.jpg" alt="<?=$ucfcccta?>" title="<?=$ucfcccta?>" /></a></p>
-					<p class="span6"><a href="<?=do_shortcode($ucfcclink);?>" target="_blank"><?=$ucfcccta?></a></p>
-				</div>
 			</div>
 		</div>
 		<?php
