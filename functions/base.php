@@ -363,37 +363,6 @@ class Timer{
 }
 
 
-
-
-/***************************************************************************
- * DEBUGGING FUNCTIONS
- * 
- * Functions to assist in theme debugging.
- * 
- ***************************************************************************/
-
-/**
- * Given an arbitrary number of arguments, will return a string with the
- * arguments dumped recursively, similar to the output of print_r but with pre
- * tags wrapped around the output.
- *
- * @return string
- * @author Jared Lang
- **/
-function dump(){
-	$args = func_get_args();
-	$out  = array();
-	foreach($args as $arg){
-		$out[] = print_r($arg, True);
-	}
-	$out = implode("<br />", $out);
-	return "<pre>{$out}</pre>";
-}
-
-
-
-
-
 /**
  * Will execute the function $func with the arguments passed via $args if the
  * debug constant is set true.  Returns whatever value the called function
