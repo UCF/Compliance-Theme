@@ -1,6 +1,8 @@
 <?php
 
-
+if (is_login()){
+	add_action('login_head', 'login_scripts', 0);
+}
 
 if (is_admin()){
 	add_action('admin_menu', 'create_utility_pages');
