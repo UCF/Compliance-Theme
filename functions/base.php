@@ -391,20 +391,7 @@ function dump(){
 }
 
 
-/**
- * Will add a debug comment to the output when the debug constant is set true.
- * Any value, including null, is enough to trigger it.
- * 
- * @return void
- * @author Jared Lang
- **/
-if (DEBUG){ 
-	function debug($string){ /*
-		print "<!-- DEBUG: {$string} -->\n"; */
-	} 
-}else{
-	function debug($string){return;}
-}
+
 
 
 /**
