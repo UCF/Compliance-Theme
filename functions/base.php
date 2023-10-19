@@ -363,22 +363,6 @@ class Timer{
 }
 
 
-/**
- * Will execute the function $func with the arguments passed via $args if the
- * debug constant is set true.  Returns whatever value the called function
- * returns, or void if debug is not set active.
- *
- * @return mixed
- * @author Jared Lang
- **/
-if (DEBUG){
-	function debug_callfunc($func, $args){
-		return call_user_func_array($func, $args);
-	}
-}else{
-	function debug_callfunc($func, $args){return;}
-}
-
 
 /**
  * Indent contents of $html passed by $n indentations.
