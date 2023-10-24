@@ -864,15 +864,16 @@ function get_search_results(
  * @author Jared Lang
  **/
 
- if (function_exists('is_login')) {
-function is_login(){
-	return in_array($GLOBALS['pagenow'], array(
-			'wp-login.php',
-			'wp-register.php',
-	));
-}
- }
-
+ /**
+ *if (function_exists('is_login')) {
+* function is_login(){
+*	return in_array($GLOBALS['pagenow'], array(
+*			'wp-login.php',
+*			'wp-register.php',
+*	));
+* }
+* }
+**/
 /**
  * Given a mimetype, will attempt to return a string representing the
  * application it is associated with.  If the mimetype is unknown, the default
